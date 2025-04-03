@@ -1,0 +1,454 @@
+{
+    "rafting": [
+      {
+        "title": "9km Rafting Adventure",
+        "description": "Experience the thrill of whitewater rafting on a 9km stretch with expert guides.",
+        "image": "https://via.placeholder.com/400x250?text=Rafting",
+        "price": "$25 per person",
+        "duration": "2 hours",
+        "reviews": [
+          {
+            "name": "John Doe",
+            "comment": "Absolutely thrilling experience! Highly recommended.",
+            "rating": 5
+          }
+        ]
+      },
+      {
+        "title": "Half-Day Rafting Excursion",
+        "description": "A perfect half-day adventure for families and groups, with gentle rapids and scenic views.",
+        "image": "https://via.placeholder.com/400x250?text=Family+Rafting",
+        "price": "$35 per person",
+        "duration": "3 hours",
+        "reviews": [
+          {
+            "name": "Jane Smith",
+            "comment": "Great for families! The guides were very patient and helpful.",
+            "rating": 4
+          },
+          {
+            "name": "David Lee",
+            "comment": "Beautiful scenery, and the rapids were just the right amount of excitement.",
+            "rating": 5
+          }
+        ]
+      },
+      {
+        "title": "Full-Day Extreme Rafting",
+        "description": "For adrenaline junkies! Tackle challenging rapids and experience the ultimate rafting adventure.",
+        "image": "https://via.placeholder.com/400x250?text=Extreme+Rafting",
+        "price": "$50 per person",
+        "duration": "6 hours",
+        "reviews": [
+          {
+            "name": "Michael Brown",
+            "comment": "This was intense! The guides were top-notch and made sure we were safe.",
+            "rating": 5
+          },
+          {
+            "name": "Emily Wilson",
+            "comment": "Best rafting experience ever! The rapids were wild and the views were amazing.",
+            "rating": 5
+          }
+        ]
+      },
+      {
+        "title": "Scenic River Rafting Tour",
+        "description": "Enjoy a leisurely rafting tour with stunning views of the surrounding nature and wildlife.",
+        "image": "https://via.placeholder.com/400x250?text=Scenic+Rafting",
+        "price": "$30 per person",
+        "duration": "4 hours",
+        "reviews": [
+          {
+            "name": "Sarah Jones",
+            "comment": "A relaxing and beautiful way to experience the river.",
+            "rating": 4
+          },
+          {
+            "name": "Robert Garcia",
+            "comment": "The guides were knowledgeable about the local flora and fauna.",
+            "rating": 4
+          },
+          {
+            "name": "Jessica Rodriguez",
+            "comment": "Perfect for a calm day on the water. I'd definitely do it again.",
+            "rating": 5
+          }
+        ]
+      }
+    ],
+    "villas": [
+    {
+      "title": "Luxury Mountain Villa",
+      "description": "A stunning villa with a breathtaking mountain view, perfect for a relaxing getaway.",
+      "image": "https://via.placeholder.com/400x250?text=Villa",
+      "price": "$200 per night",
+      "reviews": [
+        {
+          "name": "Emily Smith",
+          "comment": "Beautiful and cozy villa with amazing service!",
+          "rating": 4.8
+        }
+      ]
+    },
+    {
+      "title": "Seaside Retreat Villa",
+      "description": "Enjoy the serene beauty of the ocean from this luxurious seaside villa. Ideal for a romantic escape.",
+      "image": "https://via.placeholder.com/400x250?text=Seaside+Villa",
+      "price": "$250 per night",
+      "reviews": [
+        {
+          "name": "Michael Johnson",
+          "comment": "The view was incredible! Perfect for our honeymoon.",
+          "rating": 5.0
+        },
+        {
+          "name": "Sarah Williams",
+          "comment": "Very private and relaxing. Loved the private beach access.",
+          "rating": 4.7
+        }
+      ]
+    },
+    {
+      "title": "Forest Haven Villa",
+      "description": "Escape to this tranquil villa nestled deep within a lush forest. Perfect for nature lovers.",
+      "image": "https://via.placeholder.com/400x250?text=Forest+Villa",
+      "price": "$180 per night",
+      "reviews": [
+        {
+          "name": "David Brown",
+          "comment": "A peaceful retreat. The sounds of the forest were so soothing.",
+          "rating": 4.5
+        },
+        {
+          "name": "Jessica Davis",
+          "comment": "The villa was spacious and well-equipped. Great for a group getaway.",
+          "rating": 4.8
+        }
+      ]
+    },
+    {
+      "title": "Urban Oasis Villa",
+      "description": "Experience the best of city living in this modern villa with a private rooftop garden and pool.",
+      "image": "https://via.placeholder.com/400x250?text=Urban+Villa",
+      "price": "$300 per night",
+      "reviews": [
+        {
+          "name": "Christopher Wilson",
+          "comment": "Stylish and convenient. The rooftop pool was a highlight.",
+          "rating": 4.9
+        },
+        {
+          "name": "Amanda Garcia",
+          "comment": "Perfect location for exploring the city. The villa was very luxurious.",
+          "rating": 5.0
+        },
+        {
+            "name": "Kevin Rodriguez",
+            "comment": "Amazing place, would stay again!",
+            "rating": 4.7
+        }
+      ]
+    }
+  ],
+  "cottages": [
+    {
+      "title": "Riverside Wooden Cottage",
+      "description": "A peaceful retreat by the river, surrounded by lush greenery.",
+      "image": "https://via.placeholder.com/400x250?text=Cottage",
+      "price": "$150 per night",
+      "reviews": [
+        {
+          "name": "Michael Brown",
+          "comment": "Very relaxing and serene place. Loved the nature around.",
+          "rating": 4.7
+        }
+      ]
+    },
+    {
+      "title": "Mountain View Stone Cottage",
+      "description": "A charming stone cottage with stunning mountain views, perfect for a quiet getaway.",
+      "image": "https://via.placeholder.com/400x250?text=Mountain+Cottage",
+      "price": "$180 per night",
+      "reviews": [
+        {
+          "name": "Sarah Johnson",
+          "comment": "The views were breathtaking. The cottage was cozy and well-equipped.",
+          "rating": 4.9
+        },
+        {
+          "name": "David Lee",
+          "comment": "Perfect for a peaceful retreat. Highly recommend!",
+          "rating": 5.0
+        }
+      ]
+    },
+    {
+      "title": "Lakeside Rustic Cottage",
+      "description": "A rustic cottage by the lake, ideal for fishing and relaxation.",
+      "image": "https://via.placeholder.com/400x250?text=Lake+Cottage",
+      "price": "$160 per night",
+      "reviews": [
+        {
+          "name": "Emily Davis",
+          "comment": "Loved the peaceful atmosphere. Great for fishing and relaxing.",
+          "rating": 4.6
+        },
+        {
+          "name": "Robert Wilson",
+          "comment": "The cottage was charming and comfortable. The lake was beautiful.",
+          "rating": 4.8
+        }
+      ]
+    },
+    {
+      "title": "Secluded Forest Cottage",
+      "description": "A secluded cottage nestled deep in the forest, perfect for a romantic escape.",
+      "image": "https://via.placeholder.com/400x250?text=Forest+Cottage",
+      "price": "$170 per night",
+      "reviews": [
+        {
+          "name": "Jessica Garcia",
+          "comment": "A truly magical place. So peaceful and romantic.",
+          "rating": 5.0
+        },
+        {
+          "name": "Christopher Rodriguez",
+          "comment": "The perfect getaway. We will definitely be back.",
+          "rating": 4.9
+        },
+        {
+            "name": "Amanda Martinez",
+            "comment": "The Cottage was amazing, great location",
+            "rating": 4.7
+        }
+      ]
+    }
+  ],
+  "bungee_jumping": [
+    {
+      "title": "Extreme Bungee Jumping",
+      "description": "Jump from a height of 200 feet for an unforgettable adrenaline rush!",
+      "image": "https://via.placeholder.com/400x250?text=Bungee+Jumping",
+      "price": "$50 per jump",
+      "reviews": [
+        {
+          "name": "Sarah Lee",
+          "comment": "The scariest yet most exciting experience ever!",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "title": "Tandem Bungee Jump",
+      "description": "Share the thrill with a friend or partner in a tandem bungee jump from 150 feet.",
+      "image": "https://via.placeholder.com/400x250?text=Tandem+Bungee",
+      "price": "$90 per pair",
+      "reviews": [
+        {
+          "name": "David Kim",
+          "comment": "Jumping together made it even more fun! Great experience.",
+          "rating": 4.8
+        },
+        {
+          "name": "Emily Chen",
+          "comment": "We had a blast! The staff were very professional.",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "title": "Night Bungee Experience",
+      "description": "Experience the unique thrill of bungee jumping under the stars from a 180-foot platform.",
+      "image": "https://via.placeholder.com/400x250?text=Night+Bungee",
+      "price": "$60 per jump",
+      "reviews": [
+        {
+          "name": "Michael Park",
+          "comment": "Jumping at night was incredible! The lights made it magical.",
+          "rating": 4.9
+        },
+        {
+          "name": "Jessica Oh",
+          "comment": "A totally different experience. Highly recommended for thrill-seekers.",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "title": "Bungee Jump with River Dip",
+      "description": "Jump from 160 feet and experience a refreshing dip into the river below.",
+      "image": "https://via.placeholder.com/400x250?text=River+Bungee",
+      "price": "$70 per jump",
+      "reviews": [
+        {
+          "name": "Kevin Choi",
+          "comment": "The river dip was a fantastic addition. So refreshing!",
+          "rating": 4.7
+        },
+        {
+          "name": "Amanda Han",
+          "comment": "Amazing combo of thrill and refreshment. Loved it!",
+          "rating": 5
+        },
+        {
+            "name": "Brian Jung",
+            "comment": "Great experience, will be back!",
+            "rating": 4.8
+        }
+      ]
+    }
+  ],
+  "jungle_safari": [
+    {
+      "title": "Wildlife Jungle Safari",
+      "description": "Explore the deep jungle with our guided safari and witness wildlife up close.",
+      "image": "https://via.placeholder.com/400x250?text=Jungle+Safari",
+      "price": "$75 per person",
+      "duration": "4 hours",
+      "reviews": [
+        {
+          "name": "Daniel White",
+          "comment": "Saw a tiger in the wild! Incredible experience!",
+          "rating": 4.9
+        }
+      ]
+    },
+    {
+      "title": "Birdwatching Jungle Safari",
+      "description": "A peaceful safari focusing on the diverse birdlife of the jungle, with expert ornithologist guides.",
+      "image": "https://via.placeholder.com/400x250?text=Birdwatching+Safari",
+      "price": "$60 per person",
+      "duration": "3 hours",
+      "reviews": [
+        {
+          "name": "Linda Green",
+          "comment": "The variety of birds was amazing. Our guide was very knowledgeable.",
+          "rating": 4.7
+        },
+        {
+          "name": "George Black",
+          "comment": "A relaxing and educational experience. Highly recommended for bird lovers.",
+          "rating": 4.8
+        }
+      ]
+    },
+    {
+      "title": "Night Jungle Safari",
+      "description": "Experience the jungle's nocturnal wildlife on a thrilling night safari with spotlighting.",
+      "image": "https://via.placeholder.com/400x250?text=Night+Safari",
+      "price": "$90 per person",
+      "duration": "3 hours",
+      "reviews": [
+        {
+          "name": "Patricia King",
+          "comment": "Seeing the animals at night was a unique and exciting experience.",
+          "rating": 5.0
+        },
+        {
+          "name": "Raymond Hill",
+          "comment": "A bit scary but totally worth it! The guides were very professional and safe.",
+          "rating": 4.9
+        }
+      ]
+    },
+    {
+      "title": "Family Jungle Safari Adventure",
+      "description": "A family-friendly safari focusing on educational experiences and safe wildlife encounters.",
+      "image": "https://via.placeholder.com/400x250?text=Family+Safari",
+      "price": "$80 per person",
+      "duration": "5 hours",
+      "reviews": [
+        {
+          "name": "Stephanie Young",
+          "comment": "Great for kids! They loved seeing the animals up close.",
+          "rating": 4.8
+        },
+        {
+          "name": "Howard Scott",
+          "comment": "An enjoyable and educational day out for the whole family.",
+          "rating": 4.7
+        },
+        {
+            "name": "Nancy Adams",
+            "comment": "A great way to spend a day with the family!",
+            "rating": 4.9
+        }
+      ]
+    }
+  ],
+  "camping": [
+    {
+      "title": "Riverside Camping Adventure",
+      "description": "Experience camping by the tranquil riverside, surrounded by nature's beauty.",
+      "image": "https://via.placeholder.com/400x250?text=Riverside+Camping",
+      "price": "$30 per night",
+      "reviews": [
+        {
+          "name": "Alex Turner",
+          "comment": "A peaceful getaway! The river view was amazing.",
+          "rating": 4.6
+        }
+      ]
+    },
+    {
+      "title": "Mountain Top Camping Experience",
+      "description": "Camp under the stars on a mountain top with breathtaking panoramic views.",
+      "image": "https://via.placeholder.com/400x250?text=Mountain+Camping",
+      "price": "$40 per night",
+      "reviews": [
+        {
+          "name": "Rachel Green",
+          "comment": "The star gazing was incredible! A must-try for nature lovers.",
+          "rating": 4.9
+        },
+        {
+          "name": "Ben Carter",
+          "comment": "The sunrise from the mountain top was unforgettable.",
+          "rating": 5.0
+        }
+      ]
+    },
+    {
+      "title": "Forest Glamping Adventure",
+      "description": "Enjoy the comforts of glamping in a beautiful forest setting with modern amenities.",
+      "image": "https://via.placeholder.com/400x250?text=Forest+Glamping",
+      "price": "$50 per night",
+      "reviews": [
+        {
+          "name": "Oliver Shaw",
+          "comment": "Luxurious camping! The tents were spacious and comfortable.",
+          "rating": 4.8
+        },
+        {
+          "name": "Sophie Reed",
+          "comment": "A perfect blend of nature and comfort. Loved the outdoor dining.",
+          "rating": 4.7
+        }
+      ]
+    },
+    {
+      "title": "Desert Camping Expedition",
+      "description": "Explore the vast desert landscape and camp under the clear night sky.",
+      "image": "https://via.placeholder.com/400x250?text=Desert+Camping",
+      "price": "$35 per night",
+      "reviews": [
+        {
+          "name": "Liam Foster",
+          "comment": "The desert scenery was stunning. An adventurous experience.",
+          "rating": 4.5
+        },
+        {
+          "name": "Isabella Wood",
+          "comment": "A unique camping experience. The night sky was breathtaking.",
+          "rating": 4.8
+        },
+        {
+            "name": "Noah Powell",
+            "comment": "Great experience, the guides were very informative.",
+            "rating": 4.7
+        }
+      ]
+    }
+  ]
+  }
