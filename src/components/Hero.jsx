@@ -18,10 +18,10 @@ const Hero = () => {
       </div>
 
       {/* Heading and Text */}
-      <h1 className="text-3xl lg:text-4xl xl:text-6xl text-green-700 font-ralewayB font-bold  leading-tight">
+      <h1 className="text-4xl xl:text-6xl text-green-700 font-ralewayB font-bold  leading-tight">
         The World Out There
       </h1>
-      <h1 className="text-3xl lg:text-4xl xl:text-6xl font-ralewayB font-bold text-gray-900 leading-tight">Is Waiting</h1>
+      <h1 className="text-4xl  xl:text-6xl font-ralewayB font-bold text-gray-900 leading-tight">Is Waiting</h1>
       <p className="mt-4 text-gray-600 max-w-xl">
         There are many packages more than you need. Make sure you have enough
         options to pick the best one.

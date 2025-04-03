@@ -287,7 +287,7 @@ const Home = () => {
           <Hero />
         </div>
 
-        <div className=" md:w-9/12 lg:w-10/12 my-20 m-auto">
+        <div className=" md:w-9/12 lg:w-10/12 md:my-20 m-auto">
           <EscapeToNature />
         </div>
         <div className="my-10 md:w-11/12 lg:w-9/12 m-auto">
