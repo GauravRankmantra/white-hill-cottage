@@ -42,8 +42,8 @@ const CardList = ({cards}) => {
           320: { slidesPerView: 1, spaceBetween: 10 },
           480: { slidesPerView: 2, spaceBetween: 15 },
           768: { slidesPerView: 3, spaceBetween: 20 },
-          1024: { slidesPerView: 4, spaceBetween: 25 },
-          1280: { slidesPerView: 4, spaceBetween: 30 },
+          1024: { slidesPerView: 3, spaceBetween: 25 },
+          1280: { slidesPerView: 3, spaceBetween: 30 },
           1536: { slidesPerView: 4, spaceBetween: 35 },
         }}
         className="overflow-hidden"

@@ -290,13 +290,13 @@ const Home = () => {
         <div className=" md:w-9/12 lg:w-10/12 md:my-20 m-auto">
           <EscapeToNature />
         </div>
-        <div className="my-10 md:w-11/12 lg:w-9/12 m-auto">
+        <div className="my-10  lg:w-10/12 m-auto">
           <h1 className="text-2xl font-ralewaySb m-2 underline">
             Our Cottages{" "}
           </h1>
           <CardList cards={cottageData}/>
         </div>
-        <div className="my-10 md:w-11/12 lg:w-9/12 m-auto">
+        <div className="my-10  lg:w-10/12 m-auto">
           <h1 className="text-2xl font-ralewaySb m-2 underline">
             Rafting{" "}
           </h1>
