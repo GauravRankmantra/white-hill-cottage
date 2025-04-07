@@ -1,34 +1,60 @@
 import React from "react";
+import SplitText from "./SplitText"
+import rafting from "../assets/images/rafting2.jpg";
+import trekking from "../assets/images/trekking.jpg";
+import bungee from "../assets/images/bungee.jpg";
+import safari from "../assets/images/jungleSfari.jpg";
+import cottage from "../assets/images/cottage.jpg"
 
 const Hero = () => {
   return (
-    <section className="relative w-full font-ralewayR  px-6 md:px-16 py-16  flex flex-col items-center text-center">
+    <section className="relative w-full font-ralewayR px-6 md:px-16 py-16 flex flex-col items-center text-center">
       {/* Floating Images - Left */}
-      <div className="absolute left-0 top-1/2 transform -translate-y-1/2 hidden md:flex flex-col space-y-4">
+      <div
+        className="absolute top-1/2 left-1/1 transform -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-br from-blue-300 to-blue-700 opacity-50 blur-xl filter animate-pulse duration-7000 ease-in-out"
+        style={{ width: "400px", height: "400px" }}
+      ></div>
+      <div
+        className="absolute top-1/3 left-1/4 transform -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-500 opacity-30 blur-2xl filter animate-pulse duration-5000 ease-in-out"
+        style={{ width: "250px", height: "250px" }}
+      ></div>
+      <div
+        className="absolute bottom-1/4 right-1/4 transform -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-400 opacity-40 blur-xl filter animate-pulse duration-6000 ease-in-out"
+        style={{ width: "300px", height: "300px" }}
+      ></div>
+
+      <div className="absolute left-0 top-1/2 transform -translate-y-1/2 hidden md:flex flex-col space-y-4 hero-floating-images">
         <img
-          src="https://images.unsplash.com/photo-1631635589499-afd87d52bf64?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGNhbXBpbmd8ZW58MHx8MHx8fDA%3D"
+          src={rafting}
           alt="Adventure"
-          className="w-32 h-48 md:w-56 md:h-64 rounded-4xl object-cover shadow-lg"
+          className="hero-img w-32 h-48 md:w-[15rem] md:h-[20rem] lg:w-[20rem] lg:h-[25rem] object-cover shadow-lg"
         />
         <img
-          src="https://images.unsplash.com/photo-1628048541470-45db71ac1244?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fHJhZnRpbmd8ZW58MHx8MHx8fDA%3D"
+          src={safari}
           alt="Travel"
-          className="w-24 h-24 md:w-40 md:h-56 rounded-4xl -translate-y-10 border border-white  object-cover"
+          className="shadow-2xl hero-img-small w-24 h-24 md:w-[10rem] md:h-[15rem] lg:w-[15rem] lg:h-[20rem] -translate-y-10 border border-white object-cover"
         />
       </div>
 
       {/* Heading and Text */}
-      <h1 className="text-4xl xl:text-6xl text-green-700 font-ralewayB font-bold  leading-tight">
+      {/* <h1 className="text-4xl z-10 xl:text-6xl text-gray-900 font-ralewayB font-bold leading-tight">
         The World Out There
       </h1>
-      <h1 className="text-4xl  xl:text-6xl font-ralewayB font-bold text-gray-900 leading-tight">Is Waiting</h1>
-      <p className="mt-4 text-gray-600 max-w-xl">
+      <h1 className="z-10 text-4xl xl:text-6xl font-ralewayB font-bold text-gray-900 leading-tight">
+        Is Waiting
+      </h1> */}
+      <div className="space-y-1">
+      <SplitText text={" The World Out There"}/>
+      <SplitText text={" Is waiting"}/>
+      </div>
+
+      <p className="mt-4 z-10 text-gray-600 max-w-xl">
         There are many packages more than you need. Make sure you have enough
         options to pick the best one.
       </p>
 
       {/* Email Input & Button */}
-      <div className="mt-6 flex items-center gap-2 bg-white p-2 rounded-full shadow-lg w-full max-w-md">
+      <div className="mt-6 z-10 flex items-center gap-2 bg-white p-2 rounded-full shadow-lg w-full max-w-md">
         <input
           type="email"
           placeholder="Enter your email address"
@@ -40,18 +66,13 @@ const Hero = () => {
       </div>
 
       {/* Reviews */}
-      <div className="mt-6 flex items-center space-x-3 text-gray-700 text-lg">
+      <div className="z-10 mt-6 flex items-center space-x-3 text-gray-700 text-lg">
         <span className="font-semibold">12k+ Reviews with</span>
         <div className="flex -space-x-2">
-          {[
-            "https://images.unsplash.com/photo-1611431239888-d21bb1dd7bbe?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cG9ydHJhdGV8ZW58MHx8MHx8fDA%3D",
-            "https://images.unsplash.com/photo-1611431239888-d21bb1dd7bbe?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cG9ydHJhdGV8ZW58MHx8MHx8fDA%3D",
-            "https://images.unsplash.com/photo-1654345503171-211d64f7749b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjJ8fHBvcnRyYXRlfGVufDB8fDB8fHww",
-            "https://plus.unsplash.com/premium_photo-1677002262593-e0bc9e03b38b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-          ].map((src, idx) => (
+          {[...Array(4)].map((_, idx) => (
             <img
               key={idx}
-              src={src}
+              src="https://images.unsplash.com/photo-1611431239888-d21bb1dd7bbe?w=500&auto=format&fit=crop&q=60"
               className="w-8 h-8 rounded-full border-2 border-white shadow-md"
               alt="User"
             />
@@ -60,16 +81,16 @@ const Hero = () => {
       </div>
 
       {/* Floating Images - Right */}
-      <div className="absolute right-0 top-1/2 transform -translate-y-1/2 hidden md:flex flex-col space-y-4">
+      <div className="absolute right-0 top-1/2 transform -translate-y-1/2 hidden md:flex flex-col space-y-4 hero-floating-images">
         <img
-          src="https://images.unsplash.com/photo-1521336575822-6da63fb45455?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YWR2ZW50dXJlfGVufDB8fDB8fHww"
+          src={bungee}
           alt="Scenic"
-          className="w-32 h-48 md:w-56 md:h-64  rounded-3xl object-cover shadow-lg"
+          className="hero-img w-32 h-48 md:w-[15rem] md:h-[20rem] lg:w-[20rem] lg:h-[25rem] object-cover shadow-lg"
         />
         <img
-          src="https://images.unsplash.com/photo-1522850067562-a4c60453058d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fGhpa2luZ3xlbnwwfHwwfHx8MA%3D%3D"
+          src={cottage}
           alt="Sunset"
-          className="w-24 h-24 md:w-40 md:h-56 rounded-4xl  -translate-y-10 translate-x-20 border border-white object-cover shadow-lg"
+          className="shadow-2xl hero-img-small w-24 h-24 md:w-[10rem] md:h-[15rem] lg:w-[15rem] lg:h-[20rem] -translate-y-10 translate-x-20 border border-white object-cover"
         />
       </div>
     </section>

@@ -8,6 +8,9 @@ import "swiper/css/pagination";
 import slide1 from "../assets/images/slide1.jpg";
 import slide2 from "../assets/images/slide2.jpg";
 import slide3 from "../assets/images/slide3.jpg";
+
+import slide4 from "../assets/images/slide4.jpg";
+import slide5 from "../assets/images/slide5.jpg";
 import BookingSearch from "../components/BookingSearch";
 import CardList from "../components/CardList";
 import EscapeToNature from "../components/EscapeToNature";
@@ -242,9 +245,9 @@ const Home = () => {
         },
       ];
   return (
-    <div className="w-full ">
+    <div className="w-full  ">
       <div className="relative w-full bg-[gray-200]">
-        <div className="relative w-full h-[35rem] bg-gray-200">
+        <div className="relative w-full h-[40rem] bg-gray-200">
           <Swiper
             autoplay={{ delay: 3000, disableOnInteraction: false }}
             pagination={{ clickable: true }}
@@ -252,10 +255,10 @@ const Home = () => {
             modules={[Autoplay, Pagination]}
             className="w-full h-full bg-gray-200"
           >
-            {[slide1, slide2, slide3].map((slide, index) => (
+            {[slide1, slide5,slide2, slide3,slide4].map((slide, index) => (
               <SwiperSlide key={index} className="relative">
                 {/* Background Image */}
-                <div className="absolute inset-0 bg-black/40 z-10"></div>
+                {/* <div className="absolute inset-0 bg-black/10 z-10"></div> */}
                 <img
                   className="w-full h-full object-cover"
                   src={slide}
@@ -266,15 +269,15 @@ const Home = () => {
             ))}
           </Swiper>
           <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center z-20 px-6">
-            <h1 className="text-4xl md:text-7xl font-bold drop-shadow-lg font-ralewayB">
+            <h1 className="text-4xl md:text-7xl font-bold drop-shadow-[0_5px_3px_rgba(0,0,0,0.9)] font-ralewayB">
               Explore Our Cottages & Adventures
             </h1>
-            <p className="text-sm md:text-lg max-w-2xl mt-2 drop-shadow-lg text-gray-300 font-ralewaySb">
+            <p className="text-sm md:text-lg max-w-2xl mt-2  text-gray-100  drop-shadow-[0_5px_3px_rgba(0,0,0,0.9)]  font-ralewaySb">
               Enjoy luxurious stays, thrilling rafting, camping, jungle safari,
               and more!
             </p>
 
-            <button className="cursor-pointer mt-4 px-6 py-2 bg-green-800 hover:bg-green-700 text-white text-lg font-semibold rounded-lg shadow-lg transition duration-300">
+            <button className="cursor-pointer mt-4 px-6 py-2 bg-blue-500 hover:bg-blue-600 text-white text-lg font-semibold rounded-lg shadow-lg transition duration-300">
               Book Now
             </button>
           </div>
@@ -283,7 +286,7 @@ const Home = () => {
         <div className="relative z-30 -mt-20 ">
           <BookingSearch />
         </div>
-        <div className="md:my-32 md:w-11/12 lg:w-9/12 m-auto">
+        <div className="md:my-[15rem] md:w-11/12  m-auto">
           <Hero />
         </div>
 

@@ -17,7 +17,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-gray-200 fixed w-full top-0 py-2 z-50 font-ralewayM">
+    <nav className="bg-gray-200 w-full top-0 py-2 z-50 font-ralewayM">
       <div className="max-w-7xl border border-gray-300 shadow-2xl rounded-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           {/* Logo */}
@@ -69,7 +69,7 @@ const Navbar = () => {
           {/* Book Now Button */}
           <Link
             to="/book"
-            className="hidden md:block bg-green-900 text-white px-5 py-2 rounded-lg hover:bg-green-700 transition"
+            className="hidden md:block text-white px-5 py-2 rounded-lg bg-blue-500 hover:bg-blue-600 transition"
           >
             Book Now
           </Link>

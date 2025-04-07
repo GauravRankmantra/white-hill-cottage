@@ -12,7 +12,7 @@ const Layout = () => {
       </div>
 
       {/* <Sidebar /> */}
-      <div className="flex-auto  mt-28 overflow-hidden  ">
+      <div className="flex-auto overflow-hidden  ">
         <Outlet />
       </div>
 

@@ -153,7 +153,7 @@ const BookingSearch = () => {
         {/* Search Button */}
         <button
           onClick={() => setShowResults(true)}
-          className="bg-green-800 hover:bg-green-700 cursor-pointer text-white px-6 py-3 rounded-lg font-semibold transition flex-1 w-full"
+          className="bg-blue-500 hover:bg-blue-700 cursor-pointer text-white px-6 py-3 rounded-lg font-semibold transition flex-1 w-full"
         >
           Continue
         </button>
