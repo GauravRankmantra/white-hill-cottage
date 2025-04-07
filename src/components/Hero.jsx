@@ -6,7 +6,9 @@ import bungee from "../assets/images/bungee.jpg";
 import safari from "../assets/images/jungleSfari.jpg";
 import cottage from "../assets/images/cottage.jpg"
 
+
 const Hero = () => {
+
   return (
     <section className="relative w-full font-ralewayR px-6 md:px-16 py-16 flex flex-col items-center text-center">
       {/* Floating Images - Left */}

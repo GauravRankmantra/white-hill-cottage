@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 
 const Layout = () => {
   return (
-    <div className="flex bg-gray-200 flex-col min-h-screen no-scrollbar">
+    <div className="flex bg-gray-200 flex-col min-h-screen">
       {/* <ToastContainer /> */}
       <div className="top-0">
         <Navbar />
