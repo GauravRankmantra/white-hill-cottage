@@ -9,17 +9,17 @@ const BookNowModal = ({ isOpen, onClose }) => {
     }
   };
 
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
-    }
+  // useEffect(() => {
+  //   if (isOpen) {
+  //     document.body.style.overflow = 'auto';
+  //   } else {
+  //     document.body.style.overflow = 'auto';
+  //   }
 
-    return () => {
-      document.body.style.overflow = 'auto';
-    };
-  }, [isOpen]);
+  //   return () => {
+  //     document.body.style.overflow = 'auto';
+  //   };
+  // }, [isOpen]);
 
   if (!isOpen) return null;
 
@@ -30,11 +30,11 @@ const BookNowModal = ({ isOpen, onClose }) => {
     >
       <div
         ref={modalRef}
-        className="relative bg-gradient-to-br from-blue-500 to-cyan-400 text-white w-[90%] sm:w-[85%] md:w-[60%] max-h-[90%] overflow-y-auto p-6 rounded-xl shadow-2xl"
+        className="relative bg-black/30  border-2 border-gray-400 backdrop-blur-lg text-white w-[90%] sm:w-[85%] md:w-[50%] max-h-[90%] overflow-y-auto p-6 rounded-xl shadow-2xl"
       >
         <button
           onClick={onClose}
-          className="absolute top-3 right-4 text-white text-2xl font-bold focus:outline-none"
+          className="absolute top-3 cursor-pointer right-4 text-white text-2xl font-bold focus:outline-none"
         >
           &times;
         </button>
@@ -53,7 +53,7 @@ const BookNowModal = ({ isOpen, onClose }) => {
               type="text"
               id="name"
               name="name"
-              className="w-full px-4 py-2 rounded-md border border-white/50 text-black focus:outline-none focus:ring-2 focus:ring-white"
+              className="w-full px-4 py-2 rounded-md border border-white/50 text-white focus:outline-none focus:ring-2 focus:ring-white"
               placeholder="Your full name"
             />
           </div>
@@ -66,8 +66,20 @@ const BookNowModal = ({ isOpen, onClose }) => {
               type="email"
               id="email"
               name="email"
-              className="w-full px-4 py-2 rounded-md border border-white/50 text-black focus:outline-none focus:ring-2 focus:ring-white"
+              className="w-full px-4 py-2 rounded-md border border-white/50 text-white focus:outline-none focus:ring-2 focus:ring-white"
               placeholder="your@email.com"
+            />
+          </div>
+          <div>
+            <label htmlFor="message" className="block mb-1 text-sm font-medium">
+              Message:
+            </label>
+            <textarea
+              type="test"
+              id="message"
+              name="message"
+              className="w-full px-4 py-2 rounded-md border border-white/50 text-white focus:outline-none focus:ring-2 focus:ring-white"
+              placeholder="Enter your message"
             />
           </div>
 
