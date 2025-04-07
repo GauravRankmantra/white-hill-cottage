@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import BookNowModal from "../components/BookNowModal";
+import { FaUserFriends, FaHome } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -9,6 +11,11 @@ import "swiper/css/pagination";
 import slide1 from "../assets/images/slide1.jpg";
 import slide2 from "../assets/images/slide2.jpg";
 import slide3 from "../assets/images/slide3.jpg";
+import wh1 from "../assets/images/Wh1.jpg";
+import wh2 from "../assets/images/Wh2.jpg";
+import raft from "../assets/images/raft.svg";
+import family from "../assets/images/family.svg";
+import couple from "../assets/images/couple.svg";
 
 import slide4 from "../assets/images/slide4.jpg";
 import slide5 from "../assets/images/slide5.jpg";
@@ -16,6 +23,7 @@ import BookingSearch from "../components/BookingSearch";
 import CardList from "../components/CardList";
 import EscapeToNature from "../components/EscapeToNature";
 import Hero from "../components/Hero";
+import GoogleMap from "../components/GoogleMap";
 
 const Home = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -295,7 +303,6 @@ const Home = () => {
             >
               Book Now
             </button>
-
           </div>
           <BookNowModal isOpen={isModalOpen} onClose={handleCloseModal} />
         </div>
@@ -310,15 +317,136 @@ const Home = () => {
         <div className=" md:w-9/12 lg:w-10/12 md:my-20 m-auto">
           <EscapeToNature />
         </div>
-        <div className="my-10  lg:w-10/12 m-auto">
+        {/* <div className="my-10  lg:w-10/12 m-auto">
           <h1 className="text-2xl font-ralewaySb m-2 underline">
             Our Cottages{" "}
           </h1>
           <CardList cards={cottageData} />
+        </div> */}
+        <div className="my-16 lg:w-10/12 m-auto px-4 sm:px-6 lg:px-8">
+          <h1 className="text-center text-4xl font-bold font-ralewayB text-blue-950 mb-12">
+            🏡 Our Stay Packages
+          </h1>
+
+          {/* Standard Cottage Package */}
+          <motion.div
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.4 }}
+            className="bg-gradient-to-r from-white to-blue-50 rounded-2xl shadow-lg overflow-hidden mb-10 border border-blue-100"
+          >
+            <div className="py-8 px-6 sm:px-10 flex flex-col lg:flex-row items-center gap-10">
+              <div className="w-full lg:w-1/2 h-56 sm:h-64 rounded-xl overflow-hidden shadow-md">
+                <img
+                  src={wh1}
+                  alt="Standard Cottage"
+                  className="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
+                />
+              </div>
+
+              <div className="flex flex-col justify-center text-left space-y-3 w-full lg:w-1/2">
+                <h2 className="text-2xl font-semibold text-gray-800">
+                  1. Standard Cottage Package{" "}
+                  <span className="text-sm text-gray-500">
+                    (2 Days / 1 Night)
+                  </span>
+                </h2>
+
+                <p className="text-gray-700 text-lg">
+                  <span className="font-semibold text-blue-900">₹1500/-</span>{" "}
+                  per person
+                </p>
+                <p className="text-gray-700 text-lg">
+                  <span className="font-semibold text-blue-900">₹2000/-</span>{" "}
+                  per person{" "}
+                  <span className="text-sm text-gray-600">
+                    (Including 7 km Rafting)
+                  </span>
+                </p>
+
+                <motion.button
+                  whileTap={{ scale: 0.95 }}
+                  whileHover={{ scale: 1.05 }}
+                  className="mt-4 w-fit bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 px-6 rounded-lg shadow-md transition duration-300"
+                >
+                  Book Now
+                </motion.button>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Deluxe Cottage Package */}
+          <motion.div
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.4 }}
+            className="bg-gradient-to-r from-white to-yellow-50 rounded-2xl shadow-lg overflow-hidden border border-yellow-200"
+          >
+            <div className="py-8 px-6 sm:px-10 flex flex-col lg:flex-row items-center gap-10">
+              <div className="w-full lg:w-1/2 h-56 sm:h-64 rounded-xl overflow-hidden shadow-md">
+                <img
+                  src={wh2}
+                  alt="Deluxe Cottage"
+                  className="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
+                />
+              </div>
+
+              <div className="flex flex-col justify-start text-left space-y-6 w-full lg:w-1/2">
+                <h2 className="text-2xl font-semibold text-gray-800">
+                  2. Deluxe Cottage Package{" "}
+                  <span className="text-sm text-gray-500">
+                    (2 Days / 1 Night)
+                  </span>
+                </h2>
+
+                {/* Couple Room */}
+                <div className="space-y-1">
+                  <div className="flex items-center gap-2 text-blue-950 font-semibold text-lg">
+                    <img src={couple} alt="couple" className="w-5 h-5" />
+                    Couple Room
+                  </div>
+                  <p className="text-gray-700 text-base">
+                    <span className="font-semibold text-blue-900">₹4500/-</span>{" "}
+                    (Max 2 Persons)
+                  </p>
+                  <p className="text-gray-700 text-base">
+                    <span className="font-semibold text-blue-900">₹5000/-</span>{" "}
+                    (Including Rafting)
+                  </p>
+                </div>
+
+                {/* Family Room */}
+                <div className="space-y-1">
+                  <div className="flex items-center gap-2 text-blue-950 font-semibold text-lg">
+                    <img src={family} alt="family" className="w-5 h-5" />
+                    Family Room
+                  </div>
+                  <p className="text-gray-700 text-base">
+                    <span className="font-semibold text-blue-900">₹4500/-</span>{" "}
+                    (Max 2 Persons)
+                  </p>
+                  <p className="text-gray-700 text-base">
+                    <span className="font-semibold text-blue-900">₹5000/-</span>{" "}
+                    (Including Rafting)
+                  </p>
+                </div>
+
+                <motion.button
+                  whileTap={{ scale: 0.95 }}
+                  whileHover={{ scale: 1.05 }}
+                  className="mt-4 w-fit bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2.5 px-6 rounded-lg shadow-md transition duration-300"
+                >
+                  Book Now
+                </motion.button>
+              </div>
+            </div>
+          </motion.div>
         </div>
-        <div className="my-10  lg:w-10/12 m-auto">
+
+        <div className="my-[5rem]  lg:w-10/12 m-auto">
           <h1 className="text-2xl font-ralewaySb m-2 underline">Rafting </h1>
           <CardList cards={raftingData} />
+        </div>
+        <div className="my-[2rem]  lg:w-10/12 m-auto">
+          <GoogleMap />
         </div>
       </div>
     </div>

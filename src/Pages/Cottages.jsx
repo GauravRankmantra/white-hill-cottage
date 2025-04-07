@@ -2,6 +2,8 @@ import React from "react";
 import bg from "../assets/images/cottageBg.jpg";
 import { motion } from "framer-motion";
 import CardList from "../components/CardList";
+import ActivitiesSection from "../components/ActivitiesSection";
+import GoogleReviews from "../components/GoogleReview";
 
 const Cottages = () => {
   const amenities = [
@@ -264,6 +266,14 @@ const Cottages = () => {
       <div className="my-10  lg:w-10/12 m-auto">
         <h1 className="text-2xl font-ralewaySb m-2 underline">Our Cottages </h1>
         <CardList cards={cottageData} />
+      </div>
+
+      <div className="my-10  lg:w-10/12 m-auto">
+        <ActivitiesSection />
+      </div>
+
+      <div className="my-10  lg:w-10/12 m-auto">
+        <GoogleReviews />
       </div>
     </div>
   );

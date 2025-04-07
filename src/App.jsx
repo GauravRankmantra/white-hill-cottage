@@ -8,6 +8,7 @@ import "./App.css";
 import Layout from "./Layout";
 import Home from "./Pages/Home";
 import Cottages from "./Pages/Cottages"
+import Adventure from "./Pages/Adventure";
 
 const App = () => {
 
@@ -18,6 +19,7 @@ const App = () => {
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path="/cottages" element={<Cottages />} />
+          <Route path="/activities" element={<Adventure />} />
           
        
         </Route>

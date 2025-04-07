@@ -148,7 +148,7 @@ export default function SplitText({ text }) {
 
   return (
     <div className="border border-gray-300 container shadow-2xl rounded-xl p-2" ref={containerRef}>
-      <h1 className="h1 text-2xl md:text-3xl xl:text-7xl  font-ralewayB">
+      <h1 className="h1 text-2xl md:text-3xl xl:text-7xl  font-ralewaySb">
         {splitWords.map((item, index) => (
           <span
             key={index}
@@ -172,7 +172,7 @@ function Stylesheet() {
         justify-content: center;
         align-items: center;
         width: 100%;
-        max-width: 450px;
+        max-width: 500px;
         text-align: center;
         visibility: hidden; /* Initially hidden */
       }
