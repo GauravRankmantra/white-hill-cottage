@@ -36,7 +36,7 @@ const CardList = ({cards}) => {
       <Swiper
         modules={[Navigation]}
         spaceBetween={30}
-        slidesPerView={5}
+        slidesPerView={3}
         onSwiper={setSwiper}
         breakpoints={{
           320: { slidesPerView: 1, spaceBetween: 10 },
@@ -44,7 +44,7 @@ const CardList = ({cards}) => {
           768: { slidesPerView: 3, spaceBetween: 20 },
           1024: { slidesPerView: 3, spaceBetween: 25 },
           1280: { slidesPerView: 3, spaceBetween: 30 },
-          1536: { slidesPerView: 4, spaceBetween: 35 },
+          1536: { slidesPerView: 3, spaceBetween: 35 },
         }}
         className="overflow-hidden"
       >

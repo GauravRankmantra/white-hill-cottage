@@ -3,13 +3,13 @@ import React from "react";
 
 const Card = ({ image, title, rating, onClick, route }) => {
   return (
-    <div className="group p-2 w-72 m-auto bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 ">
+    <div className="group p-2 w-[25rem]  m-auto bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 ">
       {/* Image */}
       <div className="relative">
         <img
           src={image}
           alt={title}
-          className=" rounded-t-xl w-72 h-48 object-cover"
+          className=" rounded-t-xl w-full h-56 object-cover"
         />
         <div className="absolute top-0 right-0 px-1 rounded-l-md flex items-center space-x-0.5 bg-white">
           <h1 className="text-sm font-semibold">{rating}</h1>
@@ -25,9 +25,9 @@ const Card = ({ image, title, rating, onClick, route }) => {
 
       {/* Content */}
       <div className="py-4 px-2  flex justify-between items-center">
-        <div className="  w-52 space-y-2">
-          <div className="">
-            <h2 className="text-lg font-semibold text-gray-800 font-ralewayR truncate">
+        <div className="  w-9/12 space-y-2">
+          <div className=" space-y-1">
+            <h2 className="text-lg font-semibold text-gray-950 font-ralewayR truncate">
               {title}
             </h2>
             <h2 className="text-sm font-ralewayL wrap-normal">

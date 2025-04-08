@@ -9,6 +9,7 @@ import Layout from "./Layout";
 import Home from "./Pages/Home";
 import Cottages from "./Pages/Cottages"
 import Adventure from "./Pages/Adventure";
+import Rafting from "./Pages/Rafting";
 
 const App = () => {
 
@@ -20,6 +21,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/cottages" element={<Cottages />} />
           <Route path="/activities" element={<Adventure />} />
+          <Route path="/rafting" element={<Rafting />} />
           
        
         </Route>

@@ -17,9 +17,9 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-gray-200 w-full top-0 py-2 z-50 font-ralewayM">
-      <div className="max-w-7xl border border-gray-300 shadow-2xl rounded-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center">
+    <nav className="bg-gray-200 w-full  top-0 py-1 md:py-2 z-50 font-ralewayM">
+      <div className="max-w-7xl  border border-gray-300 shadow-2xl rounded-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between  items-center">
           {/* Logo */}
           <Link
             to="/"
@@ -43,7 +43,7 @@ const Navbar = () => {
               <span>Water Hill</span>
               <span className="text-center text-sm">Cottage</span>
             </div> */}
-            <img className="w-24 h-24" src={logo}></img>
+            <img className="w-20 h-20 md:w-24 md:h-24" src={logo}></img>
           </Link>
 
           {/* Desktop Menu */}

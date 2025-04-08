@@ -325,17 +325,17 @@ const Home = () => {
         </div> */}
         <div className="my-16 lg:w-10/12 m-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-center text-4xl font-bold font-ralewayB text-blue-950 mb-12">
-            🏡 Our Stay Packages
+             Our Stay Packages
           </h1>
 
           {/* Standard Cottage Package */}
           <motion.div
-            whileHover={{ scale: 1.02 }}
+            whileHover={{ scale: 1.005 }}
             transition={{ duration: 0.4 }}
             className="bg-gradient-to-r from-white to-blue-50 rounded-2xl shadow-lg overflow-hidden mb-10 border border-blue-100"
           >
             <div className="py-8 px-6 sm:px-10 flex flex-col lg:flex-row items-center gap-10">
-              <div className="w-full lg:w-1/2 h-56 sm:h-64 rounded-xl overflow-hidden shadow-md">
+              <div className="w-full lg:w-1/2 h-56 sm:h-64 rounded overflow-hidden shadow-md">
                 <img
                   src={wh1}
                   alt="Standard Cottage"
@@ -376,12 +376,12 @@ const Home = () => {
 
           {/* Deluxe Cottage Package */}
           <motion.div
-            whileHover={{ scale: 1.02 }}
+            whileHover={{ scale: 1.005 }}
             transition={{ duration: 0.4 }}
             className="bg-gradient-to-r from-white to-yellow-50 rounded-2xl shadow-lg overflow-hidden border border-yellow-200"
           >
             <div className="py-8 px-6 sm:px-10 flex flex-col lg:flex-row items-center gap-10">
-              <div className="w-full lg:w-1/2 h-56 sm:h-64 rounded-xl overflow-hidden shadow-md">
+              <div className="w-full lg:w-1/2 h-56 sm:h-64 rounded overflow-hidden shadow-md">
                 <img
                   src={wh2}
                   alt="Deluxe Cottage"
