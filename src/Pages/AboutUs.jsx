@@ -6,6 +6,10 @@ import camping4 from "../assets/images/camping/camping4.jpg";
 import people1 from "../assets/images/people/people1.jpg";
 import people2 from "../assets/images/people/people2.jpg";
 import people3 from "../assets/images/people/people3.jpg";
+import rafting from "../assets/images/rafting2.jpg"
+import trekking from "../assets/images/trekking.jpg"
+import yoga from "../assets/images/yoga.jpg"
+import boanfire from "../assets/images/boanfire.jpg"
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
@@ -66,7 +70,7 @@ const AboutUs = () => {
           {/* Swiper Image */}
 
           {/* Intro Text */}
-          <div className="mt-16">
+          <div className=" md:mt-16">
             <h2 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-3">
               Who We Are
             </h2>
@@ -91,48 +95,89 @@ const AboutUs = () => {
                 modules={[Autoplay]}
                 className="absolute inset-0 w-full h-full"
               >
-                {[people1,people2,people3].map(
-                  (slide, index) => (
-                    <SwiperSlide key={index}>
-                      <img
-                        src={slide}
-                        alt={`Slide ${index + 1}`}
-                        className="w-full h-full object-cover rounded-2xl"
-                      />
-                    </SwiperSlide>
-                  )
-                )}
+                {[people1, people2, people3].map((slide, index) => (
+                  <SwiperSlide key={index}>
+                    <img
+                      src={slide}
+                      alt={`Slide ${index + 1}`}
+                      className="w-full h-full object-cover rounded-2xl"
+                    />
+                  </SwiperSlide>
+                ))}
               </Swiper>
             </div>
           </div>
         </div>
-
+<hr className="mt-10 text-gray-400"></hr>
         {/* Features Section */}
-        <div className="mt-16">
-          <h2 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-6 text-center">
-            What We Offer
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-gray-700">
-            {[
-              "🏕️ Camping",
-              "🌊 River Rafting",
-              "🔥 Bonfire Evenings",
-              "🎶 Music Entertainment",
-              "🌐 Internet Connectivity",
-              "🪂 Bungee Jumping",
-              "🥾 Trekking & Mountaineering",
-              "🧘 Guided Yoga Sessions",
-              "🚿 Clean Washrooms",
-            ].map((feature, index) => (
-              <div
-                key={index}
-                className="bg-blue-50 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition"
-              >
-                {feature}
-              </div>
-            ))}
-          </div>
+        <div className="mt-20">
+  <h2 className="text-2xl sm:text-3xl font-bold text-center text-blue-950 mb-14">
+    What We Offer
+  </h2>
+
+  <div className="grid shadow p-2 gap-12">
+    {[
+      {
+        title: "Camping",
+        icon: "🏕️",
+        img: camping1,
+        desc: "Sleep beneath the stars in cozy tents surrounded by the Himalayan wilderness. Enjoy eco-friendly stays with all the essential amenities and nature all around.",
+      },
+      {
+        title: "River Rafting",
+        icon: "🌊",
+        img: rafting,
+        desc: "Experience heart-pounding rapids with professional guides on the Ganga. We offer various levels — from beginners to adrenaline junkies!",
+      },
+      {
+        title: "Bonfire Evenings",
+        icon: "🔥",
+        img: boanfire,
+        desc: "Evenings come alive with campfires, music, and storytelling. A perfect way to connect with fellow travelers in a warm, shared atmosphere.",
+      },
+      {
+        title: "Trekking & Mountaineering",
+        icon: "🥾",
+        img: trekking,
+        desc: "Explore scenic trails, forests, and hidden gems. Our guided treks are designed to inspire and challenge you — safely and memorably.",
+      },
+      {
+        title: "Yoga & Meditation",
+        icon: "🧘",
+        img: yoga,
+        desc: "Rejuvenate your body and mind with early morning yoga sessions by the river, led by experienced instructors and surrounded by silence.",
+      },
+    ].map((item, index) => (
+      <div
+        key={index}
+        className={`relative flex flex-col border-b-2 border-gray-300 sm:flex-row items-center  space-y-3 sm:items-start gap-6 ${
+          index % 2 === 0 ? "sm:flex-row" : "sm:flex-row-reverse"
+        }`}
+      >
+        {/* Image/Icon */}
+        <div className="shrink-0 w-full h-36 sm:w-[30rem] sm:h-64 relative z-10">
+          <img
+            src={item.img}
+            alt={item.title}
+            className="w-full h-full object-cover rounded"
+          />
+          <div className="absolute top-0 left-0 w-full h-full rounded-full bg-blue-100/50 -z-10 blur-xl scale-125"></div>
         </div>
+
+        {/* Textual Info */}
+        <div className="text-center sm:text-left max-w-xl">
+          <h3 className="text-xl sm:text-2xl font-semibold text-blue-900 mb-2 flex items-center justify-center sm:justify-start gap-2">
+            <span>{item.icon}</span> {item.title}
+          </h3>
+          <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
+            {item.desc}
+          </p>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
 
         {/* Location Section */}
         <div className="mt-16">

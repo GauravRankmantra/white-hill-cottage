@@ -169,7 +169,7 @@ const Cottages = () => {
           <h1 className="text-4xl md:text-7xl font-bold drop-shadow-[0_5px_3px_rgba(0,0,0,0.9)] font-ralewayB">
             Experience Comfort & Nature in Our Cozy Stays
           </h1>
-          <p className="text-sm md:text-lg  mt-2 drop-shadow-[0_5px_3px_rgba(0,0,0,0.9)] text-gray-300 font-ralewaySb">
+          <p className="text-sm md:text-lg  mt-2 drop-shadow-[0_5px_3px_rgba(0,0,0,0.9)] text-gray-100 font-ralewaySb">
             Enjoy luxurious stays, thrilling rafting, camping, jungle safari,
             and more!Choose from our well-furnished cottages and rooms, designed
             for your perfect getaway.
