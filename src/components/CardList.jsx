@@ -5,7 +5,7 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 
-const CardList = ({cards}) => {
+const CardList = ({cards,onClick}) => {
   const [swiper, setSwiper] = useState(null);
 
 
@@ -50,7 +50,7 @@ const CardList = ({cards}) => {
       >
         {cards.map((card, index) => (
           <SwiperSlide className="" key={index}>
-            <Card {...card} />
+            <Card card={card} onTrigger={onClick} />
           </SwiperSlide>
         ))}
       </Swiper>

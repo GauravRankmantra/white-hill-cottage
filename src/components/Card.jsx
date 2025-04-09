@@ -1,18 +1,26 @@
 import { distance } from "motion";
-import React from "react";
+import React, { useState } from "react";
 
-const Card = ({ image, title, rating, onClick, route }) => {
+
+const Card = ({card,onTrigger}) => {
+
+  const handleClick = () => {
+
+
+    onTrigger(card); // send data to SuperParent
+  };
   return (
-    <div className="group p-2 w-[25rem]  m-auto bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 ">
+    <div className="group p-2 w-[20rem] md:w-[25rem] m-auto bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 ">
+   
       {/* Image */}
       <div className="relative">
         <img
-          src={image}
-          alt={title}
+          src={card.image}
+          alt={card.title}
           className=" rounded-t-xl w-full h-56 object-cover"
         />
         <div className="absolute top-0 right-0 px-1 rounded-l-md flex items-center space-x-0.5 bg-white">
-          <h1 className="text-sm font-semibold">{rating}</h1>
+          <h1 className="text-sm font-semibold">{card.rating}</h1>
           <svg
             className={`h-4 w-4 text-yellow-400`}
             fill="currentColor"
@@ -25,10 +33,10 @@ const Card = ({ image, title, rating, onClick, route }) => {
 
       {/* Content */}
       <div className="py-4 px-2  flex justify-between items-center">
-        <div className="  w-9/12 space-y-2">
+        <div className="  w-8/12 md:w-9/12 space-y-2">
           <div className=" space-y-1">
             <h2 className="text-lg font-semibold text-gray-950 font-ralewayR truncate">
-              {title}
+              {card.title}
             </h2>
             <h2 className="text-sm font-ralewayL wrap-normal">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -57,18 +65,18 @@ const Card = ({ image, title, rating, onClick, route }) => {
               version="1.1"
               id="Capa_1"
               xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xmlnsXlink="http://www.w3.org/1999/xlink"
               viewBox="0 0 395.71 395.71"
-              xml:space="preserve"
-               stroke-width="1"
+              xmlSpace="preserve"
+              strokeWidth="1"
               // stroke="#24700f"
               className="w-5 h-5"
             >
-              <g id="SVGRepo_bgCarrier" stroke-width="0" />
+              <g id="SVGRepo_bgCarrier" strokeWidth="0" />
               <g
                 id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
               <g id="SVGRepo_iconCarrier">
                 <g>
@@ -76,17 +84,17 @@ const Card = ({ image, title, rating, onClick, route }) => {
                 </g>
               </g>
             </svg>
-            <h1 className="font-ralewayR text-gray-600 text-xs">
+            <h1 className="font-ralewayB text-gray-600 text-sm">
               Dehradun,uttarakhand
             </h1>
           </div>
-          {route && (
+          {card.route && (
             <div className="flex justify-start items-center space-x-0.5">
               <svg
                 viewBox="0 0 64 64"
                 className="w-6 h-6"
                 xmlns="http://www.w3.org/2000/svg"
-                stroke-width="1"
+                strokeWidth="1"
                 stroke="#000000"
                 fill="none"
               >
@@ -97,19 +105,25 @@ const Card = ({ image, title, rating, onClick, route }) => {
                 <path d="M17.87,54.89a28.73,28.73,0,0,0,3.9.89" />
                 <path
                   d="M24.68,56.07c2.79.12,5.85-.28,7.9-2.08,5.8-5.09,2.89-11.25,6.75-14.71a16.72,16.72,0,0,1,4.93-3"
-                  stroke-dasharray="7.8 2.92"
+                  strokeDasharray="7.8 2.92"
                 />
                 <path d="M45.63,35.8a23,23,0,0,1,3.88-.95" />
               </svg>
-              <h1 className="font-ralewayR text-gray-600 text-xs">{route}</h1>
+              <h1 className=" text-gray-600 text-sm font-bold">{card.route}</h1>
+            </div>
+          )}
+
+          {card.price && (
+            <div className="flex justify-start items-center space-x-0.5">
+              <h1 className="font-bold  text-green-700 text-sm">{card.price}</h1>
             </div>
           )}
         </div>
 
         {/* Continue Arrow Button */}
         <button
-          onClick={onClick}
-          className="p-2 ml-2 flex-none border border-gray-200 rounded-full transition-transform transform hover:translate-x-2 duration-300"
+          onClick={handleClick}
+          className="p-2 ml-2 cursor-pointer flex-none border border-gray-200 rounded-full transition-transform transform hover:translate-x-2 duration-300"
         >
           <svg
             className="h-6 w-6 text-gray-600 group-hover:text-gray-900"

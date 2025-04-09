@@ -163,19 +163,19 @@ const Cottages = () => {
   return (
     <div className="border mt-2">
       <div className="relative">
-        <div className="absolute inset-0 bg-black/40 z-10"></div>
+        <div className="absolute inset-0 bg-black/10 z-10"></div>
         <img className="object-cover h-[35rem] w-full" src={bg}></img>
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center z-20 px-6">
-          <h1 className="text-4xl md:text-7xl font-bold drop-shadow-lg font-ralewayB">
+          <h1 className="text-4xl md:text-7xl font-bold drop-shadow-[0_5px_3px_rgba(0,0,0,0.9)] font-ralewayB">
             Experience Comfort & Nature in Our Cozy Stays
           </h1>
-          <p className="text-sm md:text-lg  mt-2 drop-shadow-lg text-gray-300 font-ralewaySb">
+          <p className="text-sm md:text-lg  mt-2 drop-shadow-[0_5px_3px_rgba(0,0,0,0.9)] text-gray-300 font-ralewaySb">
             Enjoy luxurious stays, thrilling rafting, camping, jungle safari,
             and more!Choose from our well-furnished cottages and rooms, designed
             for your perfect getaway.
           </p>
 
-          <button className="cursor-pointer mt-4 px-6 py-2 bg-green-800 hover:bg-green-700 text-white text-lg font-semibold rounded-lg shadow-lg transition duration-300">
+          <button className="cursor-pointer mt-4 px-6 py-2 bg-blue-500 hover:bg-blue-600 text-white text-lg font-semibold rounded-lg shadow-lg transition duration-300">
             Book Now
           </button>
         </div>
