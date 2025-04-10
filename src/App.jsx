@@ -11,6 +11,8 @@ import Cottages from "./Pages/Cottages"
 import Adventure from "./Pages/Adventure";
 import Rafting from "./Pages/Rafting";
 import AboutUs from "./Pages/AboutUs";
+import Contact from "./Pages/Contact";
+import Camping from "./Pages/Camping";
 
 const App = () => {
 
@@ -24,6 +26,10 @@ const App = () => {
           <Route path="/activities" element={<Adventure />} />
           <Route path="/rafting" element={<Rafting />} />
           <Route path="/about" element={<AboutUs />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/camping" element={<Camping />} />
+          
+          
           
        
         </Route>
