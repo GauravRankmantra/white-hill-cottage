@@ -740,7 +740,7 @@ const Home = () => {
             modules={[Autoplay, Pagination]}
             className="w-full h-full bg-gray-200"
           >
-            {[slide1, slide5, slide2, slide3, slide4].map((slide, index) => (
+            {[slide1, cottage2,,cottageOutSide,cottageRoom, slide2, slide3, slide4].map((slide, index) => (
               <SwiperSlide key={index} className="relative">
                 {/* Background Image */}
                 {/* <div className="absolute inset-0 bg-black/10 z-10"></div> */}
