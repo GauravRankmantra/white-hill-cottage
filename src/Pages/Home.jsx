@@ -740,7 +740,16 @@ const Home = () => {
             modules={[Autoplay, Pagination]}
             className="w-full h-full bg-gray-200"
           >
-            {[slide1, cottage2,,cottageOutSide,cottageRoom, slide2, slide3, slide4].map((slide, index) => (
+            {[
+              slide1,
+              cottage2,
+              ,
+              cottageOutSide,
+              cottageRoom,
+              slide2,
+              slide3,
+              slide4,
+            ].map((slide, index) => (
               <SwiperSlide key={index} className="relative">
                 {/* Background Image */}
                 {/* <div className="absolute inset-0 bg-black/10 z-10"></div> */}
@@ -803,12 +812,35 @@ const Home = () => {
               className="bg-gradient-to-r from-white to-blue-50 rounded-2xl shadow-lg overflow-hidden border border-blue-100"
             >
               <div className="py-8 px-6 sm:px-10 flex flex-col items-center gap-6">
-                <div className="w-full h-56 sm:h-64 rounded overflow-hidden shadow-md">
-                  <img
+                <div className="w-full h-56 sm:h-72 rounded overflow-hidden shadow-md">
+                  <Swiper
+                    autoplay={{ delay: 3000, disableOnInteraction: false }}
+                    pagination={{ clickable: true }}
+                    loop={true}
+                    modules={[Autoplay, Pagination]}
+                    className="w-full h-full bg-gray-200 object-cover"
+                  >
+                    {[wh1, cottage2, , cottageOutSide, cottageRoom].map(
+                      (slide, index) => (
+                        <SwiperSlide key={index} className="relative">
+                          {/* Background Image */}
+                          {/* <div className="absolute inset-0 bg-black/10 z-10"></div> */}
+                          <img
+                            className="w-full h-full object-cover"
+                            src={slide}
+                            alt={`Slide ${index + 1}`}
+                          />
+                          {/* Overlay Text */}
+                        </SwiperSlide>
+                      )
+                    )}
+                  </Swiper>
+
+                  {/* <img
                     src={wh1}
                     alt="Standard Cottage"
-                    className="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
-                  />
+                    className="object-cover w-full h-full transition-transform duration-300 "
+                  /> */}
                 </div>
 
                 <div className="flex flex-col justify-center text-left space-y-3 w-full">
@@ -844,12 +876,40 @@ const Home = () => {
               className="bg-gradient-to-r from-white to-yellow-50 rounded-2xl shadow-lg overflow-hidden border border-yellow-200"
             >
               <div className="py-8 px-6 sm:px-10 flex flex-col items-center gap-6">
-                <div className="w-full h-56 sm:h-64 rounded overflow-hidden shadow-md">
-                  <img
+                <div className="w-full h-56 sm:h-72 rounded overflow-hidden shadow-md">
+                  <Swiper
+                    autoplay={{ delay: 2000, disableOnInteraction: false }}
+                    pagination={{ clickable: true }}
+                    loop={true}
+                    modules={[Autoplay, Pagination]}
+                    className="w-full h-full bg-gray-200"
+                  >
+                    {[
+                      wh2,
+                      cottage4,
+                      cottage6,
+                      cottageOutSide,
+                      cottageRoom2,
+                      cottageWashroom,
+                    ].map((slide, index) => (
+                      <SwiperSlide key={index} className="relative">
+                        {/* Background Image */}
+                        {/* <div className="absolute inset-0 bg-black/10 z-10"></div> */}
+                        <img
+                          className="w-full h-full object-cover"
+                          src={slide}
+                          alt={`Slide ${index + 1}`}
+                        />
+                        {/* Overlay Text */}
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
+
+                  {/* <img
                     src={wh2}
                     alt="Deluxe Cottage"
-                    className="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
-                  />
+                    className="object-cover w-full h-full transition-transform duration-300"
+                  /> */}
                 </div>
 
                 <div className="flex flex-col justify-center text-left space-y-6 w-full">

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import bg from "../assets/images/cottageBg.jpg";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 import CardList from "../components/CardList";
 import ActivitiesSection from "../components/ActivitiesSection";
 import GoogleReviews from "../components/GoogleReview";
@@ -15,8 +16,11 @@ import cottageRoom2 from "../assets/images/cottages/room2.jpg";
 import cottageOutSide from "../assets/images/cottages/cottage_outdoor.jpg";
 import cottageWashroom from "../assets/images/cottages/cottage_washroom.jpg";
 import CardDetail from "../components/CardDetail";
+import AnimatedOnScroll from "../components/AnimatedOnScroll";
 
 const Cottages = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
   const amenities = [
     {
       name: "Free Wi-Fi",
@@ -231,25 +235,32 @@ const Cottages = () => {
         <div className="absolute inset-0 z-10"></div>
         <img className="object-cover h-[35rem] w-full" src={bg}></img>
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center z-20 px-6">
-          <h1 className="text-4xl md:text-7xl font-bold drop-shadow-[0_5px_3px_rgba(0,0,0,0.9)] font-ralewayB">
-            Experience Comfort & Nature in Our Cozy Stays
-          </h1>
+  
+            <h1 className="text-4xl md:text-7xl font-bold">
+              Experience Comfort & Nature in Our Cozy Stays
+            </h1>
+ 
+          <AnimatedOnScroll>
+
+      
           <p className="text-sm md:text-lg  mt-2 drop-shadow-[0_5px_3px_rgba(0,0,0,0.9)] text-gray-100 font-ralewaySb">
             Enjoy luxurious stays, thrilling rafting, camping, jungle safari,
             and more!Choose from our well-furnished cottages and rooms, designed
             for your perfect getaway.
           </p>
+          </AnimatedOnScroll>
 
           <button className="cursor-pointer mt-4 px-6 py-2 bg-blue-500 hover:bg-blue-600 text-white text-lg font-semibold rounded-lg shadow-lg transition duration-300">
             Book Now
           </button>
         </div>
       </div>
+      <AnimatedOnScroll duration={1.1}>
       <div className="mt-8 border border-gray-300 shadow my-12 mx-4 rounded-md  ">
         <h1 className="text-5xl font-ralewayB text-center ">About Our Stays</h1>
         <div className="flex md:mt-8 flex-col md:flex-row  justify-center items-center p-2 md:p-8">
           <div className="shrink w-full md:w-6/12 ">
-            <h1 className=" font-ralewayL md:text-start text-center text-xl p-2">
+            <h1 className=" font-ralewayL md:text-start text-center text-sm md:text-xl p-2">
               Whether you're seeking a peaceful retreat or an adventure-filled
               stay, our cottages and rooms offer the perfect blend of comfort
               and nature. Located amidst lush greenery, our accommodations
@@ -289,53 +300,112 @@ const Cottages = () => {
           </div>
         </div>
       </div>
+      </AnimatedOnScroll>
 
-      <div className="relative w-full max-w-6xl mx-auto my-20  px-4">
-        <div className="flex flex-col md:flex-row items-center justify-center relative">
-          {/* First Image */}
-          <div className="relative z-10 w-full md:w-[22rem]">
-            <img
-              src="https://images.unsplash.com/photo-1575403071235-5dcd06cbf169?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="Nature Scene 1"
-              className="rounded-2xl object-cover w-full h-[20rem] md:h-[30rem]"
-            />
-          </div>
+      <div className="relative w-full max-w-6xl mx-auto my-20 px-4" ref={ref}>
+      <div className="flex flex-col md:flex-row items-center justify-center relative">
+        {/* First Image */}
+        <motion.div
+          className="relative z-10 w-full md:w-[22rem]"
+          initial={{ x: -120, opacity: 0 }}
+          animate={isInView ? { x: 0, opacity: 1 } : {}}
+          transition={{
+            type: "spring",
+            stiffness: 60,
+            damping: 15,
+            duration: 0.8,
+            delay: 0.9,
+          }}
+        >
+          <img
+            src="https://images.unsplash.com/photo-1575403071235-5dcd06cbf169?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Nature Scene 1"
+            className="rounded-2xl object-cover w-full h-[20rem] md:h-[30rem]"
+          />
+        </motion.div>
 
-          {/* Second Image Overlapping */}
-          <div className="relative w-full md:w-[22rem] md:-ml-20 md:-mt-28 mt-4 z-20">
-            <img
-              src={cottage5}
-              alt="Nature Scene 2"
-              className="rounded-2xl border-2 border-gray-200 object-cover w-full h-[20rem] md:h-[30rem]"
-            />
-          </div>
+        {/* Second Image Overlapping */}
+        <motion.div
+          className="relative w-full md:w-[22rem] md:-ml-20 md:-mt-28 mt-4 z-20"
+          initial={{ x: -100, opacity: 0 }}
+          animate={isInView ? { x: 0, opacity: 1 } : {}}
+          transition={{
+            type: "spring",
+            stiffness: 60,
+            damping: 15,
+            duration: 0.8,
+            delay: 0.2,
+          }}
+        >
+          <img
+            src={cottage5}
+            alt="Nature Scene 2"
+            className="rounded-2xl border-2 border-gray-200 object-cover w-full h-[20rem] md:h-[30rem]"
+          />
+        </motion.div>
 
-          {/* Text Content */}
-          <div className="mt-10 md:mt-0 md:ml-12 max-w-lg z-30 font-ralewayR">
-            <h1 className="text-3xl md:text-4xl font-ralewayB mb-4">
-              Why Stay With Us?
-            </h1>
-            <ul className="text-lg md:text-xl space-y-2">
-              <li>✨ Located in the heart of nature</li>
-              <li>
-                🏕️ Easy access to adventure activities (rafting, camping,
-                safari)
-              </li>
-              <li>🔥 Evening bonfire & entertainment</li>
-              <li>🍽️ Delicious local and continental cuisine available</li>
-            </ul>
-          </div>
-        </div>
+        {/* Text Content */}
+        <motion.div
+          className="mt-10 md:mt-0 md:ml-12 max-w-lg z-30 font-ralewayR"
+          initial={{ x: 120, opacity: 0 }}
+          animate={isInView ? { x: 0, opacity: 1 } : {}}
+          transition={{
+            type: "spring",
+            stiffness: 60,
+            damping: 15,
+            duration: 0.8,
+            delay: 0.4,
+          }}
+        >
+          <h1 className="text-3xl md:text-4xl font-ralewayB mb-4">
+            Why Stay With Us?
+          </h1>
+          <motion.ul
+            className="text-lg md:text-xl space-y-2"
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+            variants={{
+              visible: {
+                transition: {
+                  staggerChildren: 0.15,
+                },
+              },
+            }}
+          >
+            {[
+              "✨ Located in the heart of nature",
+              "🏕️ Easy access to adventure activities (rafting, camping, safari)",
+              "🔥 Evening bonfire & entertainment",
+              "🍽️ Delicious local and continental cuisine available",
+            ].map((item, index) => (
+              <motion.li
+                key={index}
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+                transition={{
+                  type: "spring",
+                  stiffness: 50,
+                  damping: 12,
+                }}
+              >
+                {item}
+              </motion.li>
+            ))}
+          </motion.ul>
+        </motion.div>
       </div>
+    </div>
 
       <div className="my-10  lg:w-10/12 m-auto">
         <h1 className="text-2xl font-ralewaySb m-2 underline">Our Cottages </h1>
         <div className="absolute top-0 z-50 flex justify-center w-full">
-            {detailModel && (
-              <CardDetail item={clickedCard} onClose={handelClose} />
-            )}
-          </div>
-        <CardList cards={cottageData}  onClick={handelDetailClick} />
+          {detailModel && (
+            <CardDetail item={clickedCard} onClose={handelClose} />
+          )}
+        </div>
+        <CardList cards={cottageData} onClick={handelDetailClick} />
       </div>
 
       <div className="my-10  lg:w-10/12 m-auto">
