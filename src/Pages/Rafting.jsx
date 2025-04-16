@@ -8,6 +8,7 @@ import rafting3 from "../assets/images/rafting5.jpg";
 import BookNowModal from "../components/BookNowModal";
 import CardList from "../components/CardList";
 import CardDetail from "../components/CardDetail";
+import raftinglogo from "../assets/raftingLogo.png";
 
 const Rafting = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -700,8 +701,16 @@ const Rafting = () => {
             briefed on techniques and safety measures before heading out. Book
             now and make a splash!
           </p>
+          <button
+            onClick={handleBookNowClick}
+            className="mt-4 cursor-pointer bg-blue-600 text-white font-ralewayB text-xl py-2 px-6 rounded-md hover:bg-black/80 transition-all duration-300"
+          >
+            Book Your Rafting
+          </button>
         </div>
+
       </div>
+      <hr className="text-gray-400"></hr>
       <div className="mt-20 bg-gray-200 p-5 rounded-3xl text-center ">
         <h3 className="text-3xl font-bold text-blue-950 flex justify-center items-center gap-2">
           <svg
@@ -772,6 +781,45 @@ const Rafting = () => {
           alt="Rafting Safety Gear"
           className="rounded-2xl shadow-lg object-cover w-full h-full max-h-[400px]"
         />
+      </div>
+      {/* Safety & Preparation */}
+      <hr className="text-gray-300 "></hr>
+      <div className="my-20 font-ralewayM grid md:grid-cols-2 gap-10 w-11/12 m-auto items-center">
+        <img
+          src={rafting2}
+          alt="Rafting Safety Gear"
+          className="rounded-2xl shadow-lg object-cover w-full h-full max-h-[400px]"
+        />
+        <div>
+          <h3 className="text-3xl font-bold text-blue-950 flex items-center gap-2">
+            <img src={raftinglogo} className="w-8 h-8"></img>
+            Fun in Rafting
+          </h3>
+          <p className="mt-4 text-gray-600 text-sm leading-relaxed">
+            Rafting isn’t just a sport—it’s a full-blown adventure packed with
+            laughter, splashes, and unforgettable memories. Whether you're
+            tackling the rapids or floating through calm stretches, every moment
+            is pure joy!
+          </p>
+          <ul className="mt-5 space-y-3 text-gray-700 text-sm">
+            {[
+              { icon: "🎉", text: "Perfect for groups, families & friends" },
+              {
+                icon: "📸",
+                text: "Capture moments with GoPro-friendly helmets",
+              },
+              {
+                icon: "🌈",
+                text: "Enjoy scenic views and hidden waterfalls",
+              },
+            ].map((item, idx) => (
+              <li key={idx} className="flex items-start gap-3">
+                <span className="text-xl">{item.icon}</span>
+                <span>{item.text}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );

@@ -35,12 +35,12 @@ const BookNowModal = ({ isOpen, onClose }) => {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 bg-opacity-50 transition-all duration-300"
+      className="scrollbar-hide fixed inset-0 z-50 flex items-center justify-center bg-black/50 bg-opacity-50 transition-all duration-300"
       onClick={handleOverlayClick}
     >
       <div
         ref={modalRef}
-        className="relative bg-black/30 border-2 border-gray-400 backdrop-blur-lg text-white w-[90%] sm:w-[85%] md:w-[50%] max-h-[90%] overflow-y-auto p-6 rounded-xl shadow-2xl"
+        className="scrollbar-hide relative bg-black/30 border border-gray-400 backdrop-blur-lg text-white w-[90%] sm:w-[85%] md:w-[50%] max-h-[90%] overflow-y-auto p-6 rounded-xl shadow-2xl"
       >
         <button
           onClick={onClose}
@@ -52,7 +52,7 @@ const BookNowModal = ({ isOpen, onClose }) => {
         <h2 className="text-2xl sm:text-3xl font-ralewayB mb-2">
           Book Your Adventure Now!
         </h2>
-        <p className="mb-6 text-white/90 text-sm sm:text-base">
+        <p className="mb-6 text-white/60 text-sm sm:text-base">
           Please fill out the form below to book your experience.
         </p>
 

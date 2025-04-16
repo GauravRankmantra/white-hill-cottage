@@ -829,7 +829,7 @@ const Home = () => {
                     modules={[Autoplay, Pagination]}
                     className="w-full h-full bg-gray-200 object-cover"
                   >
-                    {[wh1, cottage2, , cottageOutSide, cottageRoom].map(
+                    {[wh1, cottage2,cottageWashroom , cottageOutSide, cottageRoom].map(
                       (slide, index) => (
                         <SwiperSlide key={index} className="relative">
                           {/* Background Image */}

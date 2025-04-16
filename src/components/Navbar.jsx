@@ -6,7 +6,7 @@ import BookNowModal from "./BookNowModal";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
-    const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const handleBookNowClick = () => {
     setIsModalOpen(true);
   };
@@ -56,7 +56,7 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-6 font-medium text-[#25414d">
+          <div className="hidden md:flex space-x-6 font-medium text-[#25414d]">
             {navLinks.map((link) => (
               <Link
                 key={link.to}
@@ -76,7 +76,10 @@ const Navbar = () => {
           </div>
 
           {/* Book Now Button */}
-          <div  onClick={handleBookNowClick} className="hidden cursor-pointer md:block text-white px-5 py-2 rounded-lg bg-blue-500 hover:bg-blue-600 transition">
+          <div
+            onClick={handleBookNowClick}
+            className="hidden cursor-pointer md:block text-white px-5 py-2 rounded-lg bg-blue-500 hover:bg-blue-600 transition"
+          >
             Book Now
           </div>
 
