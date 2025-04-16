@@ -1,6 +1,27 @@
-import React from "react";
-
+import React, { useRef } from "react";
+import emailjs from '@emailjs/browser';
+import toast from 'react-hot-toast'; 
 const Contact = () => {
+  const formRef = useRef();
+  
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+    
+      try {
+        const res = await emailjs.sendForm(
+          "service_gaizbsg",     
+          "template_m0e2uo8",    
+          formRef.current,
+          "U4tTIdn-hdGvuqIV_"     
+        );
+    
+        toast.success("We will contact you Asap!");
+        onClose(); 
+      } catch (err) {
+        // toast.error("Failed to send message. Try again!");
+        console.error("Email error:", err);
+      }
+    };
   return (
     <>
       <section className="relative font-ralewayR z-10 overflow-hidden bg-white py-20 px-5 md:px-10 lg:px-20  dark:bg-dark lg:py-[120px]">
@@ -116,7 +137,7 @@ const Contact = () => {
             </div>
             <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
               <div className="relative rounded-lg bg-white p-8 shadow-lg dark:bg-dark-2 sm:p-12">
-                <form>
+                <form  ref={formRef} onSubmit={handleSubmit} >
                   <ContactInputBox
                     type="text"
                     name="name"
@@ -141,7 +162,7 @@ const Contact = () => {
                   <div>
                     <button
                       type="submit"
-                      className="w-full rounded border border-primary bg-blue-500 p-3 text-white transition hover:bg-opacity-90"
+                      className="w-full cursor-pointer rounded border border-primary bg-blue-500 p-3 text-white transition hover:bg-opacity-90"
                     >
                       Send Message
                     </button>

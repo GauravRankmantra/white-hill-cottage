@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import BookingForm from "./BookingForm";
 
 const BookingSearch = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -8,7 +9,11 @@ const BookingSearch = () => {
   const [checkIn, setCheckIn] = useState(null);
   const [checkOut, setCheckOut] = useState(null);
   const [guests, setGuests] = useState(1);
-  const [showResults, setShowResults] = useState(false);
+  const [showForm, setShowForm] = useState(false);
+
+  const onClose=()=>{
+    setShowForm(false)
+  }
 
   const suggestions = [
     "Sports",
@@ -21,7 +26,7 @@ const BookingSearch = () => {
 
   return (
     <div className="flex justify-center items-center mt-10 px-4 font-ralewayR">
-      <div className="bg-opacity-60 backdrop-blur-lg p-4 md:p-6 rounded-3xl flex flex-col md:flex-row flex-wrap md:flex-nowrap items-center gap-4 shadow-xl max-w-4xl w-full">
+      <div className= {`${showForm&&`hidden`} bg-opacity-60 backdrop-blur-lg p-4 md:p-6 rounded-3xl flex flex-col md:flex-row flex-wrap md:flex-nowrap items-center gap-4 shadow-xl max-w-4xl w-full`}>
         
         {/* Search Bar */}
         <div className="relative flex-1 w-full">
@@ -152,12 +157,22 @@ const BookingSearch = () => {
 
         {/* Search Button */}
         <button
-          onClick={() => setShowResults(true)}
+           onClick={() => setShowForm(true)}
           className="bg-blue-500 hover:bg-blue-700 cursor-pointer text-white px-6 py-3 rounded-lg font-semibold transition flex-1 w-full"
         >
           Continue
         </button>
+       
       </div>
+      {showForm && (
+        <BookingForm
+          activity={searchTerm}
+          checkIn={checkIn}
+          checkOut={checkOut}
+          guests={guests}
+          onClose={onClose}
+        />
+      )}
     </div>
   );
 };

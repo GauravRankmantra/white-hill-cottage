@@ -5,6 +5,7 @@ import {
   Navigate,
 } from "react-router-dom";
 import "./App.css";
+import { Toaster } from 'react-hot-toast';
 import Layout from "./Layout";
 import Home from "./Pages/Home";
 import Cottages from "./Pages/Cottages"
@@ -18,6 +19,8 @@ const App = () => {
 
 
   return (
+    <>
+    <Toaster position="top-right" reverseOrder={false} />
     <Router>
       <Routes>
         <Route element={<Layout />}>
@@ -38,6 +41,7 @@ const App = () => {
         <Route path="/forget_pass" element={<ForgetPass />} /> */}
       </Routes>
     </Router>
+    </>
   );
 };
 
