@@ -51,11 +51,11 @@ const CardDetail = ({ item, onClose }) => {
               )}
             </div>
 
-            <div className="text-sm text-gray-700 space-y-1">
+            <div className="text-lg text-gray-700 space-y-1">
               {item.duration && <p><strong>Duration:</strong> {item.duration}</p>}
               {item.difficulty && <p><strong>Difficulty:</strong> {item.difficulty}</p>}
               {item.route && <p><strong>Route:</strong> {item.route}</p>}
-              <p><strong>Price:</strong> ₹{price.toLocaleString("en-IN")}</p>
+              <p className="font-sans text-green-600"><strong className="text-black">Price:</strong> ₹{price.toLocaleString("en-IN")}</p>
             </div>
 
             <button

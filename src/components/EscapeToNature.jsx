@@ -119,9 +119,9 @@ const EscapeToNature = () => {
                 alt={item.title}
                 className="w-full h-64 md:h-72 object-cover"
               />
-              <div className="absolute inset-0 bg-black/40 flex flex-col justify-end p-6">
-                <p className="text-gray-300 text-sm">{item.location}</p>
-                <h3 className="text-white font-semibold text-xl">
+              <div className="absolute inset-0 bg-black/10 flex flex-col justify-end p-6">
+                <p className="text-gray-300 text-sm drop-shadow-[0_5px_3px_rgba(0,0,0,0.9)]">{item.location}</p>
+                <h3 className="text-white font-semibold text-xl drop-shadow-[0_5px_3px_rgba(0,0,0,0.9)]">
                   {item.title}
                 </h3>
               </div>

@@ -5,6 +5,7 @@ import BookNowModal from "../components/BookNowModal";
 import { FaUserFriends, FaHome } from "react-icons/fa";
 import { motion } from "framer-motion";
 import CardDetail from "../components/CardDetail";
+import BookingPopup from "../components/BookingPopup";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -42,6 +43,14 @@ const Home = () => {
 
   const [detailModel, setDetailModel] = useState(false);
   const [clickedCard, setClickedCard] = useState(null);
+
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [selectedPackage, setSelectedPackage] = useState(null);
+
+  const handleBookNow = (pkg) => {
+    setSelectedPackage(pkg);
+    setIsPopupOpen(true);
+  };
 
   const handelDetailClick = (card) => {
     setClickedCard(card);
@@ -786,7 +795,7 @@ const Home = () => {
         <div className="relative z-30 -mt-20 ">
           <BookingSearch />
         </div>
-        <div className="md:my-[15rem] md:w-11/12  m-auto">
+        <div className="md:my-[5rem] md:w-11/12  m-auto">
           <Hero />
         </div>
 
@@ -862,7 +871,15 @@ const Home = () => {
                     </span>
                   </p>
 
-                  <motion.button className="mt-4 w-fit bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 px-6 rounded-lg shadow-md transition duration-300">
+                  <motion.button
+                    onClick={() =>
+                      handleBookNow({
+                        name: "Standard Cottage Package",
+                        price: 2000,
+                      })
+                    }
+                    className="cursor-pointer mt-4 w-fit bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 px-6 rounded-lg shadow-md transition duration-300"
+                  >
                     Book Now
                   </motion.button>
                 </div>
@@ -963,9 +980,15 @@ const Home = () => {
                   </div>
 
                   <motion.button
+                    onClick={() =>
+                      handleBookNow({
+                        name: "Deluxe Cottage Package ",
+                        price: 5000,
+                      })
+                    }
                     whileTap={{ scale: 0.95 }}
                     whileHover={{ scale: 1.05 }}
-                    className="mt-4 w-fit bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2.5 px-6 rounded-lg shadow-md transition duration-300"
+                    className="cursor-pointer mt-4 w-fit bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2.5 px-6 rounded-lg shadow-md transition duration-300"
                   >
                     Book Now
                   </motion.button>
@@ -973,6 +996,11 @@ const Home = () => {
               </div>
             </motion.div>
           </div>
+          <BookingPopup
+            isOpen={isPopupOpen}
+            onClose={() => setIsPopupOpen(false)}
+            packageInfo={selectedPackage}
+          />
         </div>
 
         <div className="my-[5rem] relative py-2 lg:w-11/12 m-auto">
