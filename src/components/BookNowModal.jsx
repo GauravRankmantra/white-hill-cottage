@@ -48,6 +48,7 @@ const BookNowModal = ({ isOpen, onClose }) => {
         >
           &times;
         </button>
+       
 
         <h2 className="text-2xl sm:text-3xl font-ralewayB mb-2">
           Book Your Adventure Now!
