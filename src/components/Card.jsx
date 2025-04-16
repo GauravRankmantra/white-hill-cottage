@@ -1,28 +1,71 @@
 import { distance } from "motion";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, EffectFade, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/effect-fade";
 
+const Card = ({ card, onTrigger }) => {
+  const swiperRef = useRef(null);
 
-const Card = ({card,onTrigger}) => {
+  const handleMouseEnter = () => {
+    swiperRef.current?.swiper?.autoplay?.start();
+  };
+
+  const handleMouseLeave = () => {
+    swiperRef.current?.swiper?.autoplay?.stop();
+  };
 
   const handleClick = () => {
-
-
     onTrigger(card); // send data to SuperParent
   };
   return (
-    <div className="group p-2 w-[20rem] md:w-[25rem] m-auto bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 ">
-   
+    <div
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      className="group p-2 w-[20rem] md:w-[25rem] m-auto bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 "
+    >
       {/* Image */}
       <div className="relative">
-        <img
-          src={card.image}
-          alt={card.title}
-          className=" rounded-t-xl w-full h-56 object-cover"
-        />
-        <div className="absolute top-0 right-0 px-1 rounded-l-md flex items-center space-x-0.5 bg-white">
+        {Array.isArray(card.images) ? (
+          <Swiper
+            ref={swiperRef}
+            modules={[Autoplay]}
+            autoplay={{
+              delay: 1000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: false,
+            }}
+            loop={true}
+            slidesPerView={1}
+            speed={800}
+            allowTouchMove={false}
+            className="rounded-t-xl w-full h-56"
+            onSwiper={(swiper) => swiper.autoplay.stop()} // Stop autoplay initially
+          >
+            {card.images.map((img, index) => (
+              <SwiperSlide key={index}>
+                <img
+                  src={img}
+                  alt={`Slide ${index}`}
+                  className="w-full h-56 object-cover rounded-t-xl transition-all duration-700"
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        ) : (
+          <img
+            src={card.image || card.images?.[0]}
+            alt={card.title || card.name}
+            className="rounded-t-xl w-full h-56 object-cover"
+          />
+        )}
+
+        {/* Rating Overlay */}
+        <div className="absolute top-0 right-0 px-1 z-50 rounded-l-md flex items-center space-x-0.5 bg-white">
           <h1 className="text-sm font-semibold">{card.rating}</h1>
           <svg
-            className={`h-4 w-4 text-yellow-400`}
+            className="h-4 w-4 text-yellow-400"
             fill="currentColor"
             viewBox="0 0 20 20"
           >
@@ -36,12 +79,11 @@ const Card = ({card,onTrigger}) => {
         <div className="  w-8/12 md:w-9/12 space-y-2">
           <div className=" space-y-1">
             <h2 className="text-lg font-semibold text-gray-950 font-ralewayR truncate">
-              {card.title}
+              {card.title || card.name}
             </h2>
-            <h2 className="text-sm font-ralewayL wrap-normal">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt
-            </h2>
+            <h2 className="text-sm font-ralewayL line-clamp-3 break-words">
+  {card.description}
+</h2>
           </div>
 
           {/* Rating */}
@@ -59,6 +101,7 @@ const Card = ({card,onTrigger}) => {
               </svg>
             ))}
           </div> */}
+          <hr className="text-gray-300"></hr>
           <div className="flex justify-start items-center space-x-0.5">
             <svg
               fill="#24700f"
@@ -85,7 +128,7 @@ const Card = ({card,onTrigger}) => {
               </g>
             </svg>
             <h1 className="font-ralewayB text-gray-600 text-sm">
-              Dehradun,uttarakhand
+              Rishikesh,uttarakhand
             </h1>
           </div>
           {card.route && (
@@ -115,7 +158,9 @@ const Card = ({card,onTrigger}) => {
 
           {card.price && (
             <div className="flex justify-start items-center space-x-0.5">
-              <h1 className="font-bold  text-green-700 text-sm">{card.price}</h1>
+              <h1 className="font-bold  text-green-700 text-sm">
+              ₹ { card.price}
+              </h1>
             </div>
           )}
         </div>

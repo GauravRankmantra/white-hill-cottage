@@ -1,9 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import bg from "../assets/images/cottageBg.jpg";
 import { motion } from "framer-motion";
 import CardList from "../components/CardList";
 import ActivitiesSection from "../components/ActivitiesSection";
 import GoogleReviews from "../components/GoogleReview";
+import cottage1 from "../assets/images/cottages/cottage1.jpg";
+import cottage2 from "../assets/images/cottages/cottage2.jpg";
+import cottage3 from "../assets/images/cottages/cottage3.jpg";
+import cottage4 from "../assets/images/cottages/cottage4.jpg";
+import cottage5 from "../assets/images/cottages/cottage5.jpg";
+import cottage6 from "../assets/images/cottages/cottage6.jpg";
+import cottageRoom from "../assets/images/cottages/room.jpg";
+import cottageRoom2 from "../assets/images/cottages/room2.jpg";
+import cottageOutSide from "../assets/images/cottages/cottage_outdoor.jpg";
+import cottageWashroom from "../assets/images/cottages/cottage_washroom.jpg";
+import CardDetail from "../components/CardDetail";
 
 const Cottages = () => {
   const amenities = [
@@ -68,81 +79,124 @@ const Cottages = () => {
   ];
   const cottageData = [
     {
-      image:
-        "https://images.unsplash.com/photo-1595521624992-48a59aef95e3?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      title: "Forest Haven",
-      rating: 4,
-      onClick: () => console.log("Card 1 clicked"),
+      id: "a1b2c3d4-e5f6-7890-1234-567890abcdef",
+      name: "Secluded Forest Retreat",
+      description:
+        "Escape to tranquility in this charming cottage nestled deep within a lush forest. Enjoy the sounds of nature, hiking trails, and a cozy fireplace for relaxing evenings.",
+      location: "Near Jim Corbett National Park, Uttarakhand, India",
+      amenities: [
+        "Fully equipped kitchen",
+        "Wood-burning fireplace",
+        "Private balcony",
+        "BBQ grill",
+        "Hiking access",
+      ],
+      rating: 4.8,
+      reviewsCount: 125,
+      price: 3500,
+      currency: "INR",
+      availability: {
+        checkIn: "3:00 PM",
+        checkOut: "11:00 AM",
+        minNights: 2,
+      },
+      contact: {
+        owner: "Priya Sharma",
+        email: "forestretreat@example.com",
+        phone: "+91 9876543210",
+      },
+      images: [cottage1, cottage5, cottageRoom, cottageOutSide, cottageRoom2],
+      onClick: () => console.log("Secluded Forest Retreat clicked"),
     },
     {
-      image:
-        "https://images.unsplash.com/photo-1564357645071-9726b526a8f2?q=80&w=1951&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      title: "Mountain Vista Cottage",
-      rating: 3,
-      onClick: () => console.log("Card 2 clicked"),
+      id: "f7e8d9c0-b1a2-3456-7890-1234567890abcd",
+      name: "Panoramic Mountain View Cottage",
+      description:
+        "Wake up to breathtaking views of the Himalayas from this cozy mountain cottage. Perfect for nature lovers and adventure seekers, with trekking trails nearby.",
+      location: "Near Manali, Uttarakhand, India",
+      amenities: [
+        "Fully equipped kitchenette",
+        "Balcony with mountain views",
+        "Heater",
+        "Free Wi-Fi",
+        "Parking",
+      ],
+      rating: 4.5,
+      reviewsCount: 92,
+      price: 4200,
+      currency: "INR",
+      availability: {
+        checkIn: "2:00 PM",
+        checkOut: "10:00 AM",
+        minNights: 3,
+      },
+      contact: {
+        owner: "Rohan Verma",
+        email: "mountainview@example.com",
+        phone: "+91 8765432109",
+      },
+      images: [cottage2, cottage6, cottageRoom2, cottageOutSide, cottageRoom],
+      onClick: () => console.log("Panoramic Mountain View Cottage clicked"),
     },
     {
-      image:
-        "https://images.unsplash.com/photo-1587913560680-7f8187bf9634?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      title: "Lakeside Lodge",
-      rating: 3,
-      onClick: () => console.log("Card 2 clicked"),
+      id: "98765432-10fe-dcba-9876-543210fedcba",
+      name: "Serene Lakeside Lodge",
+      description:
+        "Enjoy the tranquility of lakeside living in this beautiful lodge. Perfect for fishing, boating, and relaxing by the water's edge. Offers stunning sunset views.",
+      location: "Near Naukuchiatal, Uttarakhand, India",
+      amenities: [
+        "Private access to the lake",
+        "Rowboat available",
+        "Outdoor seating area",
+        "Fully equipped kitchen",
+        "Pet-friendly",
+      ],
+      rating: 4.7,
+      reviewsCount: 110,
+      price: 5000,
+      currency: "INR",
+      availability: {
+        checkIn: "4:00 PM",
+        checkOut: "12:00 PM",
+        minNights: 2,
+      },
+      contact: {
+        owner: "Sneha Kapoor",
+        email: "lakelodge@example.com",
+        phone: "+91 7654321098",
+      },
+      images: [cottage3, cottage5, cottageRoom, cottageOutSide, cottageRoom2],
+      onClick: () => console.log("Serene Lakeside Lodge clicked"),
     },
     {
-      image:
-        "https://images.unsplash.com/photo-1576874748772-584aa2bee2d4?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      title: "Riverbend Retreat",
-      rating: 3,
-      onClick: () => console.log("Card 2 clicked"),
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1595877244574-e90ce41ce089?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      title: "Pinecone Cottage",
-      rating: 3,
-      onClick: () => console.log("Card 2 clicked"),
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1575403071235-5dcd06cbf169?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      title: "Willow Creek Cottage",
-      rating: 3,
-      onClick: () => console.log("Card 2 clicked"),
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1562182384-08115de5ee97?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      title: "Sunrise View Cottage",
-      rating: 3,
-      onClick: () => console.log("Card 2 clicked"),
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1562182384-08115de5ee97?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      title: "Sunrise View Cottage",
-      rating: 3,
-      onClick: () => console.log("Card 2 clicked"),
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1562182384-08115de5ee97?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      title: "Sunrise View Cottage",
-      rating: 3,
-      onClick: () => console.log("Card 2 clicked"),
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1562182384-08115de5ee97?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      title: "Sunrise View Cottage",
-      rating: 3,
-      onClick: () => console.log("Card 2 clicked"),
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1562182384-08115de5ee97?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      title: "Sunrise View Cottage",
-      rating: 3,
-      onClick: () => console.log("Card 2 clicked"),
+      id: "01234567-89ab-cdef-0123-456789abcdef0",
+      name: "Riverside Relaxation Cottage",
+      description:
+        "Unwind by the soothing sounds of a flowing river in this charming cottage. Enjoy fishing, riverside walks, and a peaceful atmosphere.",
+      location: "Near Rishikesh, Uttarakhand, India",
+      amenities: [
+        "River-facing balcony",
+        "Basic kitchen facilities",
+        "Outdoor seating",
+        "Fishing access",
+        "Yoga mats",
+      ],
+      rating: 4.3,
+      reviewsCount: 78,
+      price: 3000,
+      currency: "INR",
+      availability: {
+        checkIn: "2:30 PM",
+        checkOut: "10:30 AM",
+        minNights: 1,
+      },
+      contact: {
+        owner: "Vikram Singh",
+        email: "rivercottage@example.com",
+        phone: "+91 6543210987",
+      },
+      images: [cottage4, cottage2, cottageRoom, cottageOutSide, cottageRoom2],
+      onClick: () => console.log("Riverside Relaxation Cottage clicked"),
     },
   ];
 
@@ -159,11 +213,22 @@ const Cottages = () => {
     };
     return icons[icon] || null;
   };
+  const [detailModel, setDetailModel] = useState(false);
+  const [clickedCard, setClickedCard] = useState(null);
 
+  const handelDetailClick = (card) => {
+    setClickedCard(card);
+    setDetailModel(true);
+  };
+
+  const handelClose = () => {
+    setDetailModel(false);
+    setClickedCard(null);
+  };
   return (
-    <div className="border mt-2">
+    <div className=" mt-2">
       <div className="relative">
-        <div className="absolute inset-0 bg-black/10 z-10"></div>
+        <div className="absolute inset-0 z-10"></div>
         <img className="object-cover h-[35rem] w-full" src={bg}></img>
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center z-20 px-6">
           <h1 className="text-4xl md:text-7xl font-bold drop-shadow-[0_5px_3px_rgba(0,0,0,0.9)] font-ralewayB">
@@ -239,7 +304,7 @@ const Cottages = () => {
           {/* Second Image Overlapping */}
           <div className="relative w-full md:w-[22rem] md:-ml-20 md:-mt-28 mt-4 z-20">
             <img
-              src="https://images.unsplash.com/photo-1576874748772-584aa2bee2d4?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src={cottage5}
               alt="Nature Scene 2"
               className="rounded-2xl border-2 border-gray-200 object-cover w-full h-[20rem] md:h-[30rem]"
             />
@@ -265,7 +330,12 @@ const Cottages = () => {
 
       <div className="my-10  lg:w-10/12 m-auto">
         <h1 className="text-2xl font-ralewaySb m-2 underline">Our Cottages </h1>
-        <CardList cards={cottageData} />
+        <div className="absolute top-0 z-50 flex justify-center w-full">
+            {detailModel && (
+              <CardDetail item={clickedCard} onClose={handelClose} />
+            )}
+          </div>
+        <CardList cards={cottageData}  onClick={handelDetailClick} />
       </div>
 
       <div className="my-10  lg:w-10/12 m-auto">

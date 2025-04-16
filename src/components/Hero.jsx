@@ -1,14 +1,26 @@
 import React from "react";
-import SplitText from "./SplitText"
+import SplitText from "./SplitText";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, EffectFade, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/effect-fade";
 import rafting from "../assets/images/rafting2.jpg";
 import trekking from "../assets/images/trekking.jpg";
 import bungee from "../assets/images/bungee.jpg";
 import safari from "../assets/images/jungleSfari.jpg";
-import cottage from "../assets/images/cottage.jpg"
-
+import cottage from "../assets/images/cottage.jpg";
+import cottage1 from "../assets/images/cottages/cottage1.jpg";
+import cottage2 from "../assets/images/cottages/cottage2.jpg";
+import cottage3 from "../assets/images/cottages/cottage3.jpg";
+import cottage4 from "../assets/images/cottages/cottage4.jpg";
+import cottage5 from "../assets/images/cottages/cottage5.jpg";
+import cottage6 from "../assets/images/cottages/cottage6.jpg";
+import cottageRoom from "../assets/images/cottages/room.jpg";
+import cottageRoom2 from "../assets/images/cottages/room2.jpg";
+import cottageOutSide from "../assets/images/cottages/cottage_outdoor.jpg";
+import cottageWashroom from "../assets/images/cottages/cottage_washroom.jpg";
 
 const Hero = () => {
-
   return (
     <section className="relative w-full font-ralewayR px-6 md:px-16 py-16 flex flex-col items-center text-center">
       {/* Floating Images - Left */}
@@ -32,7 +44,7 @@ const Hero = () => {
           className="hero-img w-32 h-48 md:w-[15rem] md:h-[20rem] lg:w-[20rem] lg:h-[25rem] object-cover shadow-lg"
         />
         <img
-          src={safari}
+          src={bungee}
           alt="Travel"
           className="shadow-2xl hero-img-small w-24 h-24 md:w-[10rem] md:h-[15rem] lg:w-[15rem] lg:h-[20rem] -translate-y-10 border border-white object-cover"
         />
@@ -46,8 +58,8 @@ const Hero = () => {
         Is Waiting
       </h1> */}
       <div className="space-y-1">
-      <SplitText text={" The World Out There"}/>
-      <SplitText text={" Is waiting"}/>
+        <SplitText text={" The World Out There"} />
+        <SplitText text={" Is waiting"} />
       </div>
 
       <p className="mt-4 z-10 text-gray-600 max-w-xl">
@@ -85,12 +97,40 @@ const Hero = () => {
       {/* Floating Images - Right */}
       <div className="absolute right-0 top-1/2 transform -translate-y-1/2 hidden md:flex flex-col space-y-4 hero-floating-images">
         <img
-          src={bungee}
+          src={cottage3}
           alt="Scenic"
           className="hero-img w-32 h-48 md:w-[15rem] md:h-[20rem] lg:w-[20rem] lg:h-[25rem] object-cover shadow-lg"
         />
+
+        {/* <Swiper
+          modules={[Autoplay]}
+          autoplay={{
+            delay: 1000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: false,
+          }}
+          loop={true}
+          slidesPerView={1}
+          speed={800}
+          allowTouchMove={false}
+          className="shadow-2xl hero-img-small w-24 h-24 md:w-[10rem] md:h-[15rem] lg:w-[15rem] lg:h-[20rem] -translate-y-10 translate-x-20 border border-white object-cover"
+          
+        >
+          {[cottage1, cottageOutSide, cottage2, cottage3, cottageRoom2].map(
+            (img, index) => (
+              <SwiperSlide key={index}>
+                <img
+                  src={img}
+                  alt={`Slide ${index}`}
+                  className=" w-24 h-24 md:w-[10rem] md:h-[15rem] lg:w-[15rem] lg:h-[20rem]"
+                />
+              </SwiperSlide>
+            )
+          )}
+        </Swiper> */}
+
         <img
-          src={cottage}
+          src={cottage4}
           alt="Sunset"
           className="shadow-2xl hero-img-small w-24 h-24 md:w-[10rem] md:h-[15rem] lg:w-[15rem] lg:h-[20rem] -translate-y-10 translate-x-20 border border-white object-cover"
         />

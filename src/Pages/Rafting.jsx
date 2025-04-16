@@ -85,7 +85,7 @@ const Rafting = () => {
       slug: "beas-river-rafting-manali",
       rating: 4.2,
       reviewCount: 88,
-      location: "Manali, Himachal Pradesh",
+      location: "Manali, Uttarakhand",
       duration: "2-3 hours",
       difficulty: "Easy to Moderate",
       price: 1200,
@@ -96,7 +96,7 @@ const Rafting = () => {
       highlights: [
         "Gentle and moderate rapids suitable for various skill levels",
         "Breathtaking views of snow-capped peaks and lush green valleys",
-        "Opportunity to enjoy the natural beauty of Himachal Pradesh",
+        "Opportunity to enjoy the natural beauty of Uttarakhand",
         "Family-friendly activity",
       ],
       inclusion: [
@@ -486,17 +486,17 @@ const Rafting = () => {
       slug: "sutlej-river-rafting-himachal",
       rating: 4.5,
       reviewCount: 22,
-      location: "Himachal Pradesh",
+      location: "Uttarakhand",
       duration: "Multi-Day",
       difficulty: "Difficult",
       price: 7800,
       currency: "₹",
       route: "35 km", // Verify typical multi-day route on the Sutlej
       description:
-        "Experience a thrilling multi-day rafting adventure on the Sutlej River in Himachal Pradesh. Navigate through powerful rapids and enjoy the stunning landscapes of the Himalayas as you journey down this significant river.",
+        "Experience a thrilling multi-day rafting adventure on the Sutlej River in Uttarakhand. Navigate through powerful rapids and enjoy the stunning landscapes of the Himalayas as you journey down this significant river.",
       highlights: [
         "Exciting and challenging white water rafting",
-        "Spectacular mountain scenery of Himachal Pradesh",
+        "Spectacular mountain scenery of Uttarakhand",
         "Riverside camping in scenic locations",
         "A multi-day exploration of the Sutlej River",
       ],
@@ -508,7 +508,7 @@ const Rafting = () => {
         "Transportation to and from the river put-in and take-out points",
       ],
       exclusion: [
-        "Travel to and from the base camp in Himachal Pradesh",
+        "Travel to and from the base camp in Uttarakhand",
         "Personal insurance",
         "Snacks and beverages beyond the provided meals",
         "Personal gear not included in the equipment list",

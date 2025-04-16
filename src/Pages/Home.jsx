@@ -4,7 +4,7 @@ import { Autoplay, Pagination } from "swiper/modules";
 import BookNowModal from "../components/BookNowModal";
 import { FaUserFriends, FaHome } from "react-icons/fa";
 import { motion } from "framer-motion";
-import CardDetail from "../components/CardDetail"
+import CardDetail from "../components/CardDetail";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -25,6 +25,17 @@ import CardList from "../components/CardList";
 import EscapeToNature from "../components/EscapeToNature";
 import Hero from "../components/Hero";
 import GoogleMap from "../components/GoogleMap";
+
+import cottage1 from "../assets/images/cottages/cottage1.jpg";
+import cottage2 from "../assets/images/cottages/cottage2.jpg";
+import cottage3 from "../assets/images/cottages/cottage3.jpg";
+import cottage4 from "../assets/images/cottages/cottage4.jpg";
+import cottage5 from "../assets/images/cottages/cottage5.jpg";
+import cottage6 from "../assets/images/cottages/cottage6.jpg";
+import cottageRoom from "../assets/images/cottages/room.jpg";
+import cottageRoom2 from "../assets/images/cottages/room2.jpg";
+import cottageOutSide from "../assets/images/cottages/cottage_outdoor.jpg";
+import cottageWashroom from "../assets/images/cottages/cottage_washroom.jpg";
 
 const Home = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -105,7 +116,7 @@ const Home = () => {
       slug: "beas-river-rafting-manali",
       rating: 4.2,
       reviewCount: 88,
-      location: "Manali, Himachal Pradesh",
+      location: "Rishikesh, Uttarakhand",
       duration: "2-3 hours",
       difficulty: "Easy to Moderate",
       price: 1200,
@@ -116,7 +127,7 @@ const Home = () => {
       highlights: [
         "Gentle and moderate rapids suitable for various skill levels",
         "Breathtaking views of snow-capped peaks and lush green valleys",
-        "Opportunity to enjoy the natural beauty of Himachal Pradesh",
+        "Opportunity to enjoy the natural beauty of Uttarakhand",
         "Family-friendly activity",
       ],
       inclusion: [
@@ -506,17 +517,17 @@ const Home = () => {
       slug: "sutlej-river-rafting-himachal",
       rating: 4.5,
       reviewCount: 22,
-      location: "Himachal Pradesh",
+      location: "Uttarakhand",
       duration: "Multi-Day",
       difficulty: "Difficult",
       price: 7800,
       currency: "₹",
       route: "35 km", // Verify typical multi-day route on the Sutlej
       description:
-        "Experience a thrilling multi-day rafting adventure on the Sutlej River in Himachal Pradesh. Navigate through powerful rapids and enjoy the stunning landscapes of the Himalayas as you journey down this significant river.",
+        "Experience a thrilling multi-day rafting adventure on the Sutlej River in Uttarakhand. Navigate through powerful rapids and enjoy the stunning landscapes of the Himalayas as you journey down this significant river.",
       highlights: [
         "Exciting and challenging white water rafting",
-        "Spectacular mountain scenery of Himachal Pradesh",
+        "Spectacular mountain scenery of Uttarakhand",
         "Riverside camping in scenic locations",
         "A multi-day exploration of the Sutlej River",
       ],
@@ -528,7 +539,7 @@ const Home = () => {
         "Transportation to and from the river put-in and take-out points",
       ],
       exclusion: [
-        "Travel to and from the base camp in Himachal Pradesh",
+        "Travel to and from the base camp in Uttarakhand",
         "Personal insurance",
         "Snacks and beverages beyond the provided meals",
         "Personal gear not included in the equipment list",
@@ -597,83 +608,127 @@ const Home = () => {
 
   const cottageData = [
     {
-      image:
-        "https://images.unsplash.com/photo-1595521624992-48a59aef95e3?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      title: "Forest Haven",
-      rating: 4,
-      onClick: () => console.log("Card 1 clicked"),
+      id: "a1b2c3d4-e5f6-7890-1234-567890abcdef",
+      name: "Secluded Forest Retreat",
+      description:
+        "Escape to tranquility in this charming cottage nestled deep within a lush forest. Enjoy the sounds of nature, hiking trails, and a cozy fireplace for relaxing evenings.",
+      location: "Near Jim Corbett National Park, Uttarakhand, India",
+      amenities: [
+        "Fully equipped kitchen",
+        "Wood-burning fireplace",
+        "Private balcony",
+        "BBQ grill",
+        "Hiking access",
+      ],
+      rating: 4.8,
+      reviewsCount: 125,
+      price: 3500,
+      currency: "INR",
+      availability: {
+        checkIn: "3:00 PM",
+        checkOut: "11:00 AM",
+        minNights: 2,
+      },
+      contact: {
+        owner: "Priya Sharma",
+        email: "forestretreat@example.com",
+        phone: "+91 9876543210",
+      },
+      images: [cottage1, cottage5, cottageRoom, cottageOutSide, cottageRoom2],
+      onClick: () => console.log("Secluded Forest Retreat clicked"),
     },
     {
-      image:
-        "https://images.unsplash.com/photo-1564357645071-9726b526a8f2?q=80&w=1951&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      title: "Mountain Vista Cottage",
-      rating: 3,
-      onClick: () => console.log("Card 2 clicked"),
+      id: "f7e8d9c0-b1a2-3456-7890-1234567890abcd",
+      name: "Panoramic Mountain View Cottage",
+      description:
+        "Wake up to breathtaking views of the Himalayas from this cozy mountain cottage. Perfect for nature lovers and adventure seekers, with trekking trails nearby.",
+      location: "Near Manali, Uttarakhand, India",
+      amenities: [
+        "Fully equipped kitchenette",
+        "Balcony with mountain views",
+        "Heater",
+        "Free Wi-Fi",
+        "Parking",
+      ],
+      rating: 4.5,
+      reviewsCount: 92,
+      price: 4200,
+      currency: "INR",
+      availability: {
+        checkIn: "2:00 PM",
+        checkOut: "10:00 AM",
+        minNights: 3,
+      },
+      contact: {
+        owner: "Rohan Verma",
+        email: "mountainview@example.com",
+        phone: "+91 8765432109",
+      },
+      images: [cottage2, cottage6, cottageRoom2, cottageOutSide, cottageRoom],
+      onClick: () => console.log("Panoramic Mountain View Cottage clicked"),
     },
     {
-      image:
-        "https://images.unsplash.com/photo-1587913560680-7f8187bf9634?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      title: "Lakeside Lodge",
-      rating: 3,
-      onClick: () => console.log("Card 2 clicked"),
+      id: "98765432-10fe-dcba-9876-543210fedcba",
+      name: "Serene Lakeside Lodge",
+      description:
+        "Enjoy the tranquility of lakeside living in this beautiful lodge. Perfect for fishing, boating, and relaxing by the water's edge. Offers stunning sunset views.",
+      location: "Near Naukuchiatal, Uttarakhand, India",
+      amenities: [
+        "Private access to the lake",
+        "Rowboat available",
+        "Outdoor seating area",
+        "Fully equipped kitchen",
+        "Pet-friendly",
+      ],
+      rating: 4.7,
+      reviewsCount: 110,
+      price: 5000,
+      currency: "INR",
+      availability: {
+        checkIn: "4:00 PM",
+        checkOut: "12:00 PM",
+        minNights: 2,
+      },
+      contact: {
+        owner: "Sneha Kapoor",
+        email: "lakelodge@example.com",
+        phone: "+91 7654321098",
+      },
+      images: [cottage3, cottage5, cottageRoom, cottageOutSide, cottageRoom2],
+      onClick: () => console.log("Serene Lakeside Lodge clicked"),
     },
     {
-      image:
-        "https://images.unsplash.com/photo-1576874748772-584aa2bee2d4?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      title: "Riverbend Retreat",
-      rating: 3,
-      onClick: () => console.log("Card 2 clicked"),
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1595877244574-e90ce41ce089?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      title: "Pinecone Cottage",
-      rating: 3,
-      onClick: () => console.log("Card 2 clicked"),
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1575403071235-5dcd06cbf169?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      title: "Willow Creek Cottage",
-      rating: 3,
-      onClick: () => console.log("Card 2 clicked"),
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1562182384-08115de5ee97?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      title: "Sunrise View Cottage",
-      rating: 3,
-      onClick: () => console.log("Card 2 clicked"),
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1562182384-08115de5ee97?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      title: "Sunrise View Cottage",
-      rating: 3,
-      onClick: () => console.log("Card 2 clicked"),
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1562182384-08115de5ee97?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      title: "Sunrise View Cottage",
-      rating: 3,
-      onClick: () => console.log("Card 2 clicked"),
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1562182384-08115de5ee97?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      title: "Sunrise View Cottage",
-      rating: 3,
-      onClick: () => console.log("Card 2 clicked"),
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1562182384-08115de5ee97?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      title: "Sunrise View Cottage",
-      rating: 3,
-      onClick: () => console.log("Card 2 clicked"),
+      id: "01234567-89ab-cdef-0123-456789abcdef0",
+      name: "Riverside Relaxation Cottage",
+      description:
+        "Unwind by the soothing sounds of a flowing river in this charming cottage. Enjoy fishing, riverside walks, and a peaceful atmosphere.",
+      location: "Near Rishikesh, Uttarakhand, India",
+      amenities: [
+        "River-facing balcony",
+        "Basic kitchen facilities",
+        "Outdoor seating",
+        "Fishing access",
+        "Yoga mats",
+      ],
+      rating: 4.3,
+      reviewsCount: 78,
+      price: 3000,
+      currency: "INR",
+      availability: {
+        checkIn: "2:30 PM",
+        checkOut: "10:30 AM",
+        minNights: 1,
+      },
+      contact: {
+        owner: "Vikram Singh",
+        email: "rivercottage@example.com",
+        phone: "+91 6543210987",
+      },
+      images: [cottage4, cottage2, cottageRoom, cottageOutSide, cottageRoom2],
+      onClick: () => console.log("Riverside Relaxation Cottage clicked"),
     },
   ];
+
   return (
     <div className="w-full  ">
       <div className="relative w-full bg-[gray-200]">
@@ -735,114 +790,141 @@ const Home = () => {
           </h1>
           <CardList cards={cottageData} />
         </div> */}
-        <div className="my-16 lg:w-10/12 m-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-center text-4xl font-bold font-ralewayB text-blue-950 mb-12">
-            Our Stay Packages
+        <h1 className="text-center text-4xl font-bold font-ralewayB text-blue-950 mb-12">
+          Our Stay Packages
+        </h1>
+
+        <div className="px-4 sm:px-6 lg:px-8 mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8">
+            {/* Standard Cottage Package */}
+            <motion.div
+              whileHover={{ scale: 1.002 }}
+              transition={{ duration: 0.4 }}
+              className="bg-gradient-to-r from-white to-blue-50 rounded-2xl shadow-lg overflow-hidden border border-blue-100"
+            >
+              <div className="py-8 px-6 sm:px-10 flex flex-col items-center gap-6">
+                <div className="w-full h-56 sm:h-64 rounded overflow-hidden shadow-md">
+                  <img
+                    src={wh1}
+                    alt="Standard Cottage"
+                    className="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
+                  />
+                </div>
+
+                <div className="flex flex-col justify-center text-left space-y-3 w-full">
+                  <h2 className="text-2xl font-semibold text-gray-800">
+                    Standard Cottage Package{" "}
+                    <span className="text-sm text-gray-500">
+                      (2 Days / 1 Night)
+                    </span>
+                  </h2>
+                  <p className="text-gray-700 text-lg">
+                    <span className="font-semibold text-blue-900">₹1500/-</span>{" "}
+                    per person
+                  </p>
+                  <p className="text-gray-700 text-lg">
+                    <span className="font-semibold text-blue-900">₹2000/-</span>{" "}
+                    per person{" "}
+                    <span className="text-sm text-gray-600">
+                      (Including 7 km Rafting)
+                    </span>
+                  </p>
+
+                  <motion.button className="mt-4 w-fit bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 px-6 rounded-lg shadow-md transition duration-300">
+                    Book Now
+                  </motion.button>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Deluxe Cottage Package */}
+            <motion.div
+              whileHover={{ scale: 1.002 }}
+              transition={{ duration: 0.4 }}
+              className="bg-gradient-to-r from-white to-yellow-50 rounded-2xl shadow-lg overflow-hidden border border-yellow-200"
+            >
+              <div className="py-8 px-6 sm:px-10 flex flex-col items-center gap-6">
+                <div className="w-full h-56 sm:h-64 rounded overflow-hidden shadow-md">
+                  <img
+                    src={wh2}
+                    alt="Deluxe Cottage"
+                    className="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
+                  />
+                </div>
+
+                <div className="flex flex-col justify-center text-left space-y-6 w-full">
+                  <h2 className="text-2xl font-semibold text-gray-800">
+                    Deluxe Cottage Package{" "}
+                    <span className="text-sm text-gray-500">
+                      (2 Days / 1 Night)
+                    </span>
+                  </h2>
+
+                  {/* Couple Room */}
+                  <div className="flex justify-around border border-yellow-100">
+                    <div className="space-y-1">
+                      <div className="flex items-center gap-2 text-blue-950 font-semibold text-lg">
+                        <img src={couple} alt="couple" className="w-5 h-5" />
+                        Couple Room
+                      </div>
+                      <p className="text-gray-700 text-base">
+                        <span className="font-semibold text-blue-900">
+                          ₹4500/-
+                        </span>{" "}
+                        (Max 2 Persons)
+                      </p>
+                      <p className="text-gray-700 text-base">
+                        <span className="font-semibold text-blue-900">
+                          ₹5000/-
+                        </span>{" "}
+                        (Including Rafting)
+                      </p>
+                    </div>
+
+                    {/* Family Room */}
+                    <div className="space-y-1">
+                      <div className="flex items-center gap-2 text-blue-950 font-semibold text-lg">
+                        <img src={family} alt="family" className="w-5 h-5" />
+                        Family Room
+                      </div>
+                      <p className="text-gray-700 text-base">
+                        <span className="font-semibold text-blue-900">
+                          ₹4500/-
+                        </span>{" "}
+                        (Max 2 Persons)
+                      </p>
+                      <p className="text-gray-700 text-base">
+                        <span className="font-semibold text-blue-900">
+                          ₹5000/-
+                        </span>{" "}
+                        (Including Rafting)
+                      </p>
+                    </div>
+                  </div>
+
+                  <motion.button
+                    whileTap={{ scale: 0.95 }}
+                    whileHover={{ scale: 1.05 }}
+                    className="mt-4 w-fit bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2.5 px-6 rounded-lg shadow-md transition duration-300"
+                  >
+                    Book Now
+                  </motion.button>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+
+        <div className="my-[5rem] relative py-2 lg:w-11/12 m-auto">
+          <div className="absolute top-0 z-50 flex justify-center w-full">
+            {detailModel && (
+              <CardDetail item={clickedCard} onClose={handelClose} />
+            )}
+          </div>
+          <h1 className="text-2xl font-ralewaySb m-2 underline">
+            Our Cottages
           </h1>
-
-          {/* Standard Cottage Package */}
-          <motion.div className="bg-gradient-to-r from-white to-blue-50 rounded-2xl shadow-lg overflow-hidden mb-10 border border-blue-100">
-            <div className="py-8 px-6 sm:px-10 flex flex-col lg:flex-row items-center gap-10">
-              <div className="w-full lg:w-1/2 h-56 sm:h-64 rounded overflow-hidden shadow-md">
-                <img
-                  src={wh1}
-                  alt="Standard Cottage"
-                  className="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
-                />
-              </div>
-
-              <div className="flex flex-col justify-center text-left space-y-3 w-full lg:w-1/2">
-                <h2 className="text-2xl font-semibold text-gray-800">
-                  1. Standard Cottage Package{" "}
-                  <span className="text-sm text-gray-500">
-                    (2 Days / 1 Night)
-                  </span>
-                </h2>
-
-                <p className="text-gray-700 text-lg">
-                  <span className="font-semibold text-blue-900">₹1500/-</span>{" "}
-                  per person
-                </p>
-                <p className="text-gray-700 text-lg">
-                  <span className="font-semibold text-blue-900">₹2000/-</span>{" "}
-                  per person{" "}
-                  <span className="text-sm text-gray-600">
-                    (Including 7 km Rafting)
-                  </span>
-                </p>
-
-                <motion.button className="mt-4 w-fit bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 px-6 rounded-lg shadow-md transition duration-300">
-                  Book Now
-                </motion.button>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Deluxe Cottage Package */}
-          <motion.div
-            whileHover={{ scale: 1.005 }}
-            transition={{ duration: 0.4 }}
-            className="bg-gradient-to-r from-white to-yellow-50 rounded-2xl shadow-lg overflow-hidden border border-yellow-200"
-          >
-            <div className="py-8 px-6 sm:px-10 flex flex-col lg:flex-row items-center gap-10">
-              <div className="w-full lg:w-1/2 h-56 sm:h-64 rounded overflow-hidden shadow-md">
-                <img
-                  src={wh2}
-                  alt="Deluxe Cottage"
-                  className="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
-                />
-              </div>
-
-              <div className="flex flex-col justify-start text-left space-y-6 w-full lg:w-1/2">
-                <h2 className="text-2xl font-semibold text-gray-800">
-                  2. Deluxe Cottage Package{" "}
-                  <span className="text-sm text-gray-500">
-                    (2 Days / 1 Night)
-                  </span>
-                </h2>
-
-                {/* Couple Room */}
-                <div className="space-y-1">
-                  <div className="flex items-center gap-2 text-blue-950 font-semibold text-lg">
-                    <img src={couple} alt="couple" className="w-5 h-5" />
-                    Couple Room
-                  </div>
-                  <p className="text-gray-700 text-base">
-                    <span className="font-semibold text-blue-900">₹4500/-</span>{" "}
-                    (Max 2 Persons)
-                  </p>
-                  <p className="text-gray-700 text-base">
-                    <span className="font-semibold text-blue-900">₹5000/-</span>{" "}
-                    (Including Rafting)
-                  </p>
-                </div>
-
-                {/* Family Room */}
-                <div className="space-y-1">
-                  <div className="flex items-center gap-2 text-blue-950 font-semibold text-lg">
-                    <img src={family} alt="family" className="w-5 h-5" />
-                    Family Room
-                  </div>
-                  <p className="text-gray-700 text-base">
-                    <span className="font-semibold text-blue-900">₹4500/-</span>{" "}
-                    (Max 2 Persons)
-                  </p>
-                  <p className="text-gray-700 text-base">
-                    <span className="font-semibold text-blue-900">₹5000/-</span>{" "}
-                    (Including Rafting)
-                  </p>
-                </div>
-
-                <motion.button
-                  whileTap={{ scale: 0.95 }}
-                  whileHover={{ scale: 1.05 }}
-                  className="mt-4 w-fit bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2.5 px-6 rounded-lg shadow-md transition duration-300"
-                >
-                  Book Now
-                </motion.button>
-              </div>
-            </div>
-          </motion.div>
+          <CardList cards={cottageData} onClick={handelDetailClick} />
         </div>
 
         <div className="my-[5rem] relative py-2 lg:w-11/12 m-auto">

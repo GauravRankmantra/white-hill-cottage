@@ -1,7 +1,29 @@
 import React, { useRef } from "react";
+import emailjs from '@emailjs/browser';
+import toast from 'react-hot-toast'; 
 
 const BookNowModal = ({ isOpen, onClose }) => {
   const modalRef = useRef(null);
+  const formRef = useRef();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+  
+    try {
+      const res = await emailjs.sendForm(
+        "service_gaizbsg",     
+        "template_lqyy7qa",    
+        formRef.current,
+        "U4tTIdn-hdGvuqIV_"     
+      );
+  
+      toast.success("Booking sent successfully!");
+      onClose(); 
+    } catch (err) {
+      toast.error("Failed to send booking. Try again!");
+      console.error("Email error:", err);
+    }
+  };
 
   const handleOverlayClick = (e) => {
     if (modalRef.current && !modalRef.current.contains(e.target)) {
@@ -13,7 +35,7 @@ const BookNowModal = ({ isOpen, onClose }) => {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/10 bg-opacity-50 transition-all duration-300"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 bg-opacity-50 transition-all duration-300"
       onClick={handleOverlayClick}
     >
       <div
@@ -34,7 +56,7 @@ const BookNowModal = ({ isOpen, onClose }) => {
           Please fill out the form below to book your experience.
         </p>
 
-        <form className="space-y-4">
+        <form ref={formRef} onSubmit={handleSubmit}  className="space-y-4 ">
           <div>
             <label htmlFor="name" className="block mb-1 text-sm font-medium">
               Full Name:
@@ -148,7 +170,7 @@ const BookNowModal = ({ isOpen, onClose }) => {
 
           <button
             type="submit"
-            className="w-full bg-white text-blue-600 font-semibold px-6 py-3 rounded-md hover:bg-gray-200 transition duration-300"
+            className="w-full cursor-pointer bg-white text-blue-600 font-semibold px-6 py-3 rounded-md hover:bg-gray-200 transition duration-300"
           >
             Submit Booking
           </button>

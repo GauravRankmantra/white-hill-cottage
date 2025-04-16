@@ -1,10 +1,19 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import logo from "../assets/images/logo.png"
+import logo from "../assets/images/logo.png";
+import BookNowModal from "./BookNowModal";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+    const [isModalOpen, setIsModalOpen] = useState(false);
+  const handleBookNowClick = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
 
   const navLinks = [
     { to: "/", label: "Home" },
@@ -67,12 +76,9 @@ const Navbar = () => {
           </div>
 
           {/* Book Now Button */}
-          <Link
-            to="/book"
-            className="hidden md:block text-white px-5 py-2 rounded-lg bg-blue-500 hover:bg-blue-600 transition"
-          >
+          <div  onClick={handleBookNowClick} className="hidden cursor-pointer md:block text-white px-5 py-2 rounded-lg bg-blue-500 hover:bg-blue-600 transition">
             Book Now
-          </Link>
+          </div>
 
           {/* Mobile Menu Toggle */}
           <button
@@ -112,6 +118,7 @@ const Navbar = () => {
             )}
           </button>
         </div>
+        <BookNowModal isOpen={isModalOpen} onClose={handleCloseModal} />
       </div>
 
       {/* Mobile Menu */}
