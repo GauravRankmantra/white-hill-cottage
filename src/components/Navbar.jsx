@@ -85,7 +85,7 @@ const Navbar = () => {
 
           {/* Mobile Menu Toggle */}
           <button
-            className="md:hidden text-green-600 focus:outline-none"
+            className="md:hidden text-green-700 focus:outline-none"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? (
@@ -147,7 +147,7 @@ const Navbar = () => {
             ))}
             <Link
               to="/book"
-              className="bg-green-600 text-white px-4 py-2 rounded-lg text-center hover:bg-green-700 transition"
+              className="bg-blue-600 text-white px-4 py-2 rounded-lg text-center hover:bg-blue-700 transition"
               onClick={() => setIsOpen(false)}
             >
               Book Now

@@ -875,7 +875,7 @@ const Home = () => {
                     onClick={() =>
                       handleBookNow({
                         name: "Standard Cottage Package",
-                        price: 2000,
+                        price: 1000,
                       })
                     }
                     className="cursor-pointer mt-4 w-fit bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 px-6 rounded-lg shadow-md transition duration-300"
@@ -983,7 +983,7 @@ const Home = () => {
                     onClick={() =>
                       handleBookNow({
                         name: "Deluxe Cottage Package ",
-                        price: 5000,
+                        price: 3500,
                       })
                     }
                     whileTap={{ scale: 0.95 }}

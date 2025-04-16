@@ -5,6 +5,8 @@ import AdventureActivities from "../components/AdventureActivities";
 import rafting from "../assets/images/rafting2.jpg";
 import trekking from "../assets/images/slide3.jpg";
 import BookNowModal from "../components/BookNowModal";
+import waterfallMain from "../assets/images/waterfall2.jpg"
+import waterfallSecondary from "../assets/images/waterfall1.jpg"
 const Adventure = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const handelClose = () => {
@@ -78,9 +80,56 @@ const Adventure = () => {
                 Book Your Adventure
               </button>
             </div>
+            
           </div>
         </div>
       </div>
+      <hr className="text-gray-400"></hr>
+      <div className="my-20 px-4 sm:px-6 lg:px-12">
+  <div className="max-w-7xl mt-24 mx-auto">
+    <h1 className="text-3xl sm:text-4xl lg:text-6xl font-ralewayM text-center mb-10 text-gray-800">
+      Discover Waterfall Wonders
+    </h1>
+
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center relative">
+      {/* Left Section - Waterfall Main Image */}
+      <div className="relative w-full">
+        <img
+          src={waterfallMain}
+          alt="Waterfall Exploration"
+          className="w-full h-64 sm:h-80 lg:h-[30rem] object-cover rounded-xl shadow-lg"
+        />
+
+        {/* Overlay Secondary Image on large screens */}
+        <div className="hidden lg:block absolute -left-24 top-8">
+          <img
+            src={waterfallSecondary}
+            alt="Hidden Waterfall"
+            className="w-72 h-[25rem] object-cover border-r-4 border-gray-200 rounded-xl shadow-md"
+          />
+        </div>
+      </div>
+
+      {/* Right Section - Text & Button */}
+      <div className="space-y-4 text-center lg:text-left">
+        <h2 className="text-xl sm:text-2xl lg:text-3xl font-ralewaySb text-gray-900">
+          Discover the Magic of Hidden Waterfalls
+        </h2>
+        <p className="text-sm sm:text-base text-gray-600 font-ralewayM max-w-lg mx-auto lg:mx-0">
+          Trek through lush forest trails and uncover majestic waterfalls —
+          nature's hidden gems await at Water Hill Cottage.
+        </p>
+        {/* <button
+          onClick={handleBookNowClick}
+          className="mt-4 cursor-pointer bg-black text-white py-2 px-6 rounded-md hover:bg-black/80 transition-all duration-300"
+        >
+          Book Waterfall Exploration
+        </button> */}
+      </div>
+    </div>
+  </div>
+</div>
+
       <BookNowModal isOpen={isModalOpen} onClose={handleCloseModal} />
     </div>
   );

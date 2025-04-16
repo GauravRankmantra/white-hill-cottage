@@ -1,5 +1,7 @@
 import React from "react";
 import { Mountain, Tent, Umbrella, TreePine, Waves } from "lucide-react";
+import { GiWaterfall } from "react-icons/gi";
+
 import rafting from "../assets/images/rafting3.jpg";
 
 const activities = [
@@ -32,6 +34,12 @@ const activities = [
     icon: <Mountain className="text-purple-600 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10" />,
     desc: "Discover scenic trails with panoramic views through thrilling treks.",
     image: rafting,
+  },
+  {
+    title: "Waterfall Exploration",
+    icon: <GiWaterfall size={28} strokeWidth={1}  className="text-blue-500 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10" />, // Changed icon & color suggestion
+    desc: "Discover hidden cascades and enjoy the refreshing beauty of majestic waterfalls.", // Updated description
+    // image: waterfallImage, // Renamed image variable placeholder
   },
 ];
 

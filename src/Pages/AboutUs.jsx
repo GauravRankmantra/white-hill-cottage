@@ -10,6 +10,8 @@ import rafting from "../assets/images/rafting2.jpg"
 import trekking from "../assets/images/trekking.jpg"
 import yoga from "../assets/images/yoga.jpg"
 import boanfire from "../assets/images/boanfire.jpg"
+import { TentTree,Waves ,FlameKindling,MountainSnow,BicepsFlexed,MapPinHouse,Car,HeartPulse,Building2} from 'lucide-react';
+
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
@@ -119,31 +121,32 @@ const AboutUs = () => {
     {[
       {
         title: "Camping",
-        icon: "🏕️",
+        icon: <TentTree size={28} strokeWidth={0.8} />,
+        
         img: camping1,
         desc: "Sleep beneath the stars in cozy tents surrounded by the Himalayan wilderness. Enjoy eco-friendly stays with all the essential amenities and nature all around.",
       },
       {
         title: "River Rafting",
-        icon: "🌊",
+        icon: <Waves size={28} strokeWidth={0.8} />,
         img: rafting,
         desc: "Experience heart-pounding rapids with professional guides on the Ganga. We offer various levels — from beginners to adrenaline junkies!",
       },
       {
         title: "Bonfire Evenings",
-        icon: "🔥",
+        icon: <FlameKindling size={28} strokeWidth={0.8} />,
         img: boanfire,
         desc: "Evenings come alive with campfires, music, and storytelling. A perfect way to connect with fellow travelers in a warm, shared atmosphere.",
       },
       {
         title: "Trekking & Mountaineering",
-        icon: "🥾",
+        icon: <MountainSnow size={28} strokeWidth={0.8} />,
         img: trekking,
         desc: "Explore scenic trails, forests, and hidden gems. Our guided treks are designed to inspire and challenge you — safely and memorably.",
       },
       {
         title: "Yoga & Meditation",
-        icon: "🧘",
+        icon: <BicepsFlexed size={28} strokeWidth={0.8} />,
         img: yoga,
         desc: "Rejuvenate your body and mind with early morning yoga sessions by the river, led by experienced instructors and surrounded by silence.",
       },
@@ -166,7 +169,7 @@ const AboutUs = () => {
 
         {/* Textual Info */}
         <div className="text-center sm:text-left max-w-xl">
-          <h3 className="text-xl sm:text-2xl font-semibold text-blue-900 mb-2 flex items-center justify-center sm:justify-start gap-2">
+          <h3 className="text-xl sm:text-2xl font-semibold text-blue-950 mb-2 flex items-center justify-center sm:justify-start gap-2">
             <span>{item.icon}</span> {item.title}
           </h3>
           <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
@@ -184,11 +187,12 @@ const AboutUs = () => {
           <h2 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-3">
             Easy to Reach
           </h2>
-          <ul className="text-gray-600 list-disc list-inside space-y-2 text-base sm:text-lg">
-            <li>📍 0 km from Shivpuri Railway Station</li>
-            <li>🚗 1.5 km from Badrinath Highway</li>
-            <li>🏙️ 15 km from Rishikesh Main City</li>
-            <li>🏥 10 km from Nearest Medical Center</li>
+          <ul className="text-gray-600 list-disc list-inside space-y-3 text-base sm:text-lg">
+            <li className="flex space-x-2.5"><span className="text-yellow-700"><MapPinHouse size={28} strokeWidth={0.8} /> </span><h1>0 km from Shivpuri Railway Station</h1></li>
+            <li className="flex space-x-2.5"><span className="text-red-700"><Car size={28} strokeWidth={0.8} /> </span><h1>1.5 km from Badrinath Highway</h1></li>
+            <li className="flex space-x-2.5"><span className="text-gray-700"><Building2 size={28} strokeWidth={0.8} /> </span><h1>15 km from Rishikesh Main City</h1></li>
+            <li className="flex space-x-2.5"><span className="text-green-700"><HeartPulse size={28} strokeWidth={0.8} /> </span><h1>10 km from Nearest Medical Center</h1></li>
+            
           </ul>
         </div>
 
